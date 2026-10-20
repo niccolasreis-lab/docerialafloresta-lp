@@ -6,6 +6,7 @@ import { ArrowIcon, ClockIcon, InstagramIcon, LocationIcon, PhoneIcon, WhatsAppI
 import { MobileNavigation } from "@/components/mobile-navigation";
 import { MotionReveal } from "@/components/motion-reveal";
 import { ProductPlaceholder } from "@/components/product-placeholder";
+import { MenuSection } from "@/components/menu-section";
 
 const whatsappUrl = createWhatsAppUrl("Olá! Gostaria de fazer um pedido na Doceria La Floresta.");
 const quoteUrl = createWhatsAppUrl("Olá! Gostaria de pedir um orçamento para encomenda.");
@@ -76,8 +77,8 @@ export default function Home() {
           {trustItems.map((item, index) => <div key={item} className="trust-item"><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></div>)}
         </div></section>
 
-        <section className="section" id="cardapio"><div className="container">
-          <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Favoritos da casa</p><h2>Os mais pedidos</h2></div><p>Uma seleção dos clássicos que fazem parte da nossa história. Cardápio completo e filtros chegam na próxima etapa.</p></MotionReveal>
+        <section className="section" id="destaques"><div className="container">
+          <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Favoritos da casa</p><h2>Os mais pedidos</h2></div><p>Uma seleção dos clássicos que fazem parte da nossa história. Veja o cardápio completo logo abaixo.</p></MotionReveal>
           <div className="featured-grid">{featuredItems.map((item, index) => (
             <MotionReveal className="product-card" key={item.name}>
               <ProductPlaceholder image={item.image} label={item.name} />
@@ -90,6 +91,8 @@ export default function Home() {
             </MotionReveal>
           ))}</div>
         </div></section>
+
+        <MenuSection />
 
         <section className="section order-section" id="encomendas"><div className="container order-grid">
           <MotionReveal className="order-visual"><ProductPlaceholder image="/images/products/bolo-de-nozes.jpg" label="Bolo de Nozes para encomendas" /></MotionReveal>
