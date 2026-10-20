@@ -102,15 +102,17 @@ export function MenuSection() {
           >
             {filteredItems.map((item) => (
               <div className="product-card full-menu-card" key={item.slug}>
-                <ProductPlaceholder image={item.image} label={item.name} />
+                <ProductPlaceholder
+                  image={item.image}
+                  label={item.name}
+                  context="menu"
+                  position={item.imagePosition}
+                  fit={item.imageFit}
+                />
                 <div className="product-copy">
                   {item.availabilityNote && <span className="availability-badge">{item.availabilityNote}</span>}
                   <h3>{item.name}</h3>
-                  {item.description ? (
-                    <p>{item.description}</p>
-                  ) : (
-                    <p className="placeholder-desc">Item tradicional da casa.</p>
-                  )}
+                  <p>{item.description}</p>
                   <a
                     href={createMenuInquiryUrl(item.name)}
                     className="text-link"

@@ -18,11 +18,11 @@ const bolosCategory = menuCategories.find((c) => c.id === "bolos")?.items || [];
 const tortasCategory = menuCategories.find((c) => c.id === "tortas-doces")?.items || [];
 
 const featuredItems = [
-  bolosCategory.find((i) => i.slug === "bolo-floresta-negra") || { name: "Bolo Floresta Negra", description: "Massa de chocolate, recheio de chantilly e cereja", image: "/images/products/bolo-floresta-negra.jpg" },
-  bolosCategory.find((i) => i.slug === "bolo-de-brigadeiro") || { name: "Bolo de Brigadeiro", description: "Massa de chocolate, brigadeiro mole e granulado", image: "/images/products/bolo-de-brigadeiro.jpg" },
-  tortasCategory.find((i) => i.slug === "torta-de-morango") || { name: "Torta de Morango", description: "Um clássico da vitrine, com morangos", image: "/images/products/torta-de-morango.jpg" },
-  tortasCategory.find((i) => i.slug === "cheesecake-de-amora") || { name: "Cheesecake de Amora", description: "Cheesecake com cobertura de amora", image: "/images/products/cheesecake-de-amora.jpg" },
-];
+  bolosCategory.find((item) => item.slug === "bolo-floresta-negra"),
+  bolosCategory.find((item) => item.slug === "bolo-de-brigadeiro"),
+  tortasCategory.find((item) => item.slug === "torta-de-morango"),
+  tortasCategory.find((item) => item.slug === "cheesecake-de-amora"),
+].filter((item) => item !== undefined);
 
 const trustItems = ["+20 anos de tradição", "Bolos, doces, salgados e sorvetes", "Aberto todos os dias", "Delivery pelo iFood"];
 
@@ -38,7 +38,7 @@ export default function Home() {
       <header className="site-header">
         <div className="header-inner">
           <a href="#inicio" className="brand" aria-label="Doceria La Floresta — início">
-            <Image src="/logo-placeholder.svg" alt="Logo temporário da Doceria La Floresta" width={54} height={54} priority />
+            <Image src="/logo-placeholder.svg" alt="Logo temporário da Doceria La Floresta" width={54} height={54} />
             <span><strong>La Floresta</strong><small>{business.descriptor}</small></span>
           </a>
           <nav className="desktop-nav" aria-label="Navegação principal">
@@ -67,7 +67,13 @@ export default function Home() {
               <p className="consult-note">Disponibilidade e valores sob consulta.</p>
             </MotionReveal>
             <MotionReveal className="hero-visual">
-              <ProductPlaceholder image="/images/products/bolo-floresta-negra.jpg" label="Bolo Floresta Negra da Doceria La Floresta" priority />
+              <ProductPlaceholder
+                image="/images/products/bolo-floresta-negra.webp"
+                label="Bolo Floresta Negra da Doceria La Floresta"
+                context="hero"
+                lcp
+                position="center center"
+              />
               <div className="hero-seal"><strong>+20</strong><span>anos de<br />tradição</span></div>
             </MotionReveal>
           </div>
@@ -81,11 +87,17 @@ export default function Home() {
           <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Favoritos da casa</p><h2>Os mais pedidos</h2></div><p>Uma seleção dos clássicos que fazem parte da nossa história. Veja o cardápio completo logo abaixo.</p></MotionReveal>
           <div className="featured-grid">{featuredItems.map((item, index) => (
             <MotionReveal className="product-card" key={item.name}>
-              <ProductPlaceholder image={item.image} label={item.name} />
+              <ProductPlaceholder
+                image={item.image}
+                label={item.name}
+                context="featured"
+                position={item.imagePosition}
+                fit={item.imageFit}
+              />
               <div className="product-copy">
                 <span className="card-number">0{index + 1}</span>
                 <h3>{item.name}</h3>
-                <p>{item.description || "Deliciosa opção tradicional da nossa vitrine."}</p>
+                <p>{item.description}</p>
                 <ExternalLink href={createMenuInquiryUrl(item.name)} className="text-link">Consultar <ArrowIcon /></ExternalLink>
               </div>
             </MotionReveal>
@@ -95,7 +107,7 @@ export default function Home() {
         <MenuSection />
 
         <section className="section order-section" id="encomendas"><div className="container order-grid">
-          <MotionReveal className="order-visual"><ProductPlaceholder image="/images/products/bolo-de-nozes.jpg" label="Bolo de Nozes para encomendas" /></MotionReveal>
+          <MotionReveal className="order-visual"><ProductPlaceholder image="/images/products/bolo-de-nozes.webp" label="Bolo de Nozes para encomendas" context="order" position="center 45%" /></MotionReveal>
           <MotionReveal className="order-copy"><p className="eyebrow light">Celebre com a gente</p><h2>Encomendas para momentos especiais</h2><p>Para aniversários, encontros e eventos, preparamos opções tradicionais sob consulta.</p>
             <ul className="order-list"><li><strong>Bolos inteiros</strong><span>Servem aproximadamente 12 pessoas</span></li><li><strong>Mini salgados</strong><span>Porções com 30 unidades</span></li><li><strong>Tortas inteiras</strong><span>Opções de 8 ou 12 fatias</span></li></ul>
             <ExternalLink href={quoteUrl} className="button button-cream"><WhatsAppIcon /> Pedir orçamento</ExternalLink>
@@ -116,28 +128,28 @@ export default function Home() {
           <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Direto da vitrine</p><h2>Um pouco da La Floresta</h2></div><ExternalLink href={business.social.instagram} className="button button-outline"><InstagramIcon /> Seguir @doceria.lafloresta</ExternalLink></MotionReveal>
           <div className="gallery-grid">
             <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-1" label="Ver o Instagram da Doceria La Floresta — foto 1">
-              <ProductPlaceholder image="/images/products/bolo-rigo.jpg" label="Bolo Rigo" />
+              <ProductPlaceholder image="/images/products/bolo-rigo.webp" label="Bolo Rigo" context="gallery" position="center center" />
             </ExternalLink>
             <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-2" label="Ver o Instagram da Doceria La Floresta — foto 2">
-              <ProductPlaceholder image="/images/products/bolo-de-leite-ninho.jpg" label="Bolo de Leite Ninho" />
+              <ProductPlaceholder image="/images/products/bolo-de-leite-ninho.webp" label="Bolo de Leite Ninho" context="gallery" position="center 50%" />
             </ExternalLink>
             <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-3" label="Ver o Instagram da Doceria La Floresta — foto 3">
-              <ProductPlaceholder image="/images/products/bolo-de-abacaxi.jpg" label="Bolo de Abacaxi" />
+              <ProductPlaceholder image="/images/products/bolo-de-abacaxi.webp" label="Bolo de Abacaxi" context="gallery" position="52% center" />
             </ExternalLink>
             <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-4" label="Ver o Instagram da Doceria La Floresta — foto 4">
-              <ProductPlaceholder image="/images/products/bolo-de-kit-kat-com-morango.jpg" label="Bolo de Kit-Kat com Morango" />
+              <ProductPlaceholder image="/images/products/bolo-de-kit-kat-com-morango.webp" label="Bolo de Kit-Kat com Morango" context="gallery" position="center center" fit="contain" />
             </ExternalLink>
             <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-5" label="Ver o Instagram da Doceria La Floresta — foto 5">
-              <ProductPlaceholder image="/images/products/bolo-mil-folhas.jpg" label="Bolo Mil Folhas" />
+              <ProductPlaceholder image="/images/products/bolo-mil-folhas.webp" label="Bolo Mil Folhas" context="gallery" position="center center" />
             </ExternalLink>
             <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-6" label="Ver o Instagram da Doceria La Floresta — foto 6">
-              <ProductPlaceholder image="/images/products/bolo-trufado.jpg" label="Bolo Trufado" />
+              <ProductPlaceholder image="/images/products/bolo-trufado.webp" label="Bolo Trufado" context="gallery" position="center 50%" />
             </ExternalLink>
             <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-7" label="Ver o Instagram da Doceria La Floresta — foto 7">
-              <ProductPlaceholder image="/images/products/bolo-de-morango-com-cobertura-de-chantilly.jpg" label="Bolo de Morango com Chantilly" />
+              <ProductPlaceholder image="/images/products/bolo-de-morango-com-cobertura-de-chantilly.webp" label="Bolo de Morango com Chantilly" context="gallery" position="center center" />
             </ExternalLink>
             <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-8" label="Ver o Instagram da Doceria La Floresta — foto 8">
-              <ProductPlaceholder image="/images/products/bolo-de-doce-de-leite-com-morango.jpg" label="Bolo de Doce de Leite com Morango" />
+              <ProductPlaceholder image="/images/products/bolo-de-doce-de-leite-com-morango.webp" label="Bolo de Doce de Leite com Morango" context="gallery" position="center 48%" />
             </ExternalLink>
           </div>
         </div></section>
