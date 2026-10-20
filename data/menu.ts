@@ -11,7 +11,7 @@ export type MenuItem = {
   slug: string;
   name: string;
   description?: string;
-  image: null;
+  image: string | null;
   availabilityNote?: string;
 };
 
@@ -30,13 +30,32 @@ const slugify = (name: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
-const item = (name: string, description?: string, availabilityNote?: string): MenuItem => ({
-  slug: slugify(name),
-  name,
-  ...(description ? { description } : {}),
-  image: null,
-  ...(availabilityNote ? { availabilityNote } : {}),
-});
+const imageMap: Record<string, string> = {
+  "bolo-floresta-negra": "/images/products/bolo-floresta-negra.jpg",
+  "bolo-de-nozes": "/images/products/bolo-de-nozes.jpg",
+  "bolo-de-brigadeiro": "/images/products/bolo-de-brigadeiro.jpg",
+  "bolo-de-leite-ninho": "/images/products/bolo-de-leite-ninho.jpg",
+  "bolo-rigo": "/images/products/bolo-rigo.jpg",
+  "bolo-de-doce-de-leite-com-morango": "/images/products/bolo-de-doce-de-leite-com-morango.jpg",
+  "bolo-de-abacaxi": "/images/products/bolo-de-abacaxi.jpg",
+  "bolo-mil-folhas": "/images/products/bolo-mil-folhas.jpg",
+  "bolo-trufado": "/images/products/bolo-trufado.jpg",
+  "bolo-de-kit-kat-com-morango": "/images/products/bolo-de-kit-kat-com-morango.jpg",
+  "bolo-de-morango-com-cobertura-de-chantilly": "/images/products/bolo-de-morango-com-cobertura-de-chantilly.jpg",
+  "torta-de-morango": "/images/products/torta-de-morango.jpg",
+  "cheesecake-de-amora": "/images/products/cheesecake-de-amora.jpg",
+};
+
+const item = (name: string, description?: string, availabilityNote?: string): MenuItem => {
+  const slug = slugify(name);
+  return {
+    slug,
+    name,
+    ...(description ? { description } : {}),
+    image: imageMap[slug] || null,
+    ...(availabilityNote ? { availabilityNote } : {}),
+  };
+};
 
 export const menuCategories: readonly MenuCategory[] = [
   {

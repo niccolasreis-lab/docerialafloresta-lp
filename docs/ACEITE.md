@@ -22,19 +22,19 @@
 - [x] Todas as categorias e itens do cardápio do briefing estão presentes; descrições especificadas para os cinco bolos iniciais estão corretas.
 
 ## Interface, conversão e responsividade
-- [ ] Header fixo inclui logo, âncoras Cardápio/Encomendas/Sobre/Contato, CTA WhatsApp, badge de status e menu hambúrguer funcional no mobile.
-- [ ] Badge “Aberto agora” é calculado de forma honesta sem inventar o horário de abertura; o estado/placeholder deixa a pendência explícita.
-- [ ] Hero contém título, slogan e CTAs de WhatsApp (primário) e iFood (secundário).
-- [ ] Faixa de confiança contém os quatro diferenciais solicitados.
-- [ ] Seção “Mais pedidos” traz exatamente Bolo Floresta Negra, Bolo de Brigadeiro, Torta de Morango e Cheesecake de Amora.
-- [ ] Cardápio possui categorias em abas com rolagem horizontal no mobile e busca/filtro rápido.
-- [ ] Cada item do cardápio mostra nome, descrição quando fornecida, imagem/placeholder e “Consultar”.
-- [ ] “Consultar” abre WhatsApp com `Olá! Gostaria de consultar o item: {nome}` devidamente URL-encoded.
-- [ ] Encomendas menciona bolos (~12 pessoas), mini salgados (30 un.) e tortas inteiras (8 ou 12 fatias), com CTA de orçamento.
-- [ ] Seções Como pedir, Galeria (6–9 itens e link Instagram), Localização/Contato (incluindo mapa) e Rodapé estão presentes na ordem do briefing.
-- [ ] Botão flutuante do WhatsApp permanece disponível em todas as telas.
-- [ ] Em 375px, 768px e 1280px não há cortes, sobreposições nem navegação inacessível.
-- [ ] A identidade usa carmim, creme quente, cacau e laranja-dourado; títulos serifados e corpo sans-serif; tom acolhedor e tradicional.
+- [x] Header fixo inclui logo, âncoras Cardápio/Encomendas/Sobre/Contato, CTA WhatsApp, badge de status e menu hambúrguer funcional no mobile.
+- [x] Badge “Aberto agora” é calculado de forma honesta sem inventar o horário de abertura; o estado/placeholder deixa a pendência explícita.
+- [x] Hero contém título, slogan e CTAs de WhatsApp (primário) e iFood (secundário).
+- [x] Faixa de confiança contém os quatro diferenciais solicitados.
+- [x] Seção “Mais pedidos” traz exatamente Bolo Floresta Negra, Bolo de Brigadeiro, Torta de Morango e Cheesecake de Amora.
+- [x] Cardápio possui categorias em abas com rolagem horizontal no mobile e busca/filtro rápido.
+- [x] Cada item do cardápio mostra nome, descrição quando fornecida, imagem/placeholder e “Consultar”.
+- [x] “Consultar” abre WhatsApp com `Olá! Gostaria de consultar o item: {nome}` devidamente URL-encoded.
+- [x] Encomendas menciona bolos (~12 pessoas), mini salgados (30 un.) e tortas inteiras (8 ou 12 fatias), com CTA de orçamento.
+- [x] Seções Como pedir, Galeria (6–9 itens e link Instagram), Localização/Contato (incluindo mapa) e Rodapé estão presentes na ordem do briefing.
+- [x] Botão flutuante do WhatsApp permanece disponível em todas as telas.
+- [x] Em 375px, 768px e 1280px não há cortes, sobreposições nem navegação inacessível.
+- [x] A identidade usa carmim, creme quente, cacau e laranja-dourado; títulos serifados e corpo sans-serif; tom acolhedor e tradicional.
 
 ## Acessibilidade, SEO e desempenho
 - [ ] Todas as imagens possuem `alt` útil (ou `alt=""` somente quando decorativas); uso de `next/image` e carregamento não crítico lazy.
