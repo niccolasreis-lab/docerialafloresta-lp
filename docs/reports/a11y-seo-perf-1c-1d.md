@@ -6,7 +6,7 @@
 
 ## Resumo
 
-O commit `955993c` entrega a implementação completa do cardápio em abas com rolagem horizontal no mobile, filtro de busca em tempo real (`MenuSection`), além de metadados avançados, Open Graph, Twitter Cards e dados estruturados JSON-LD (`Bakery` / `LocalBusiness`). O JSON-LD utiliza exclusivamente dados reais confirmados e preserva o placeholder `[CONFIRMAR horário de abertura]` sem inventar horários. Teclado, foco visível, semântica, headings e otimização com `next/image` foram rigorosamente validados. O build, lint e typecheck passam sem erros.
+O commit `955993c` entrega a implementação completa do cardápio em abas com rolagem horizontal no mobile, filtro de busca em tempo real (`MenuSection`), além de metadados avançados, Open Graph, Twitter Cards e dados estruturados JSON-LD (`Bakery` / `LocalBusiness`). O JSON-LD utiliza exclusivamente dados reais confirmados; o horário foi posteriormente confirmado pelo proprietário como atendimento diário das 10:00 às 02:00. Teclado, foco visível, semântica, headings e otimização com `next/image` foram rigorosamente validados. O build, lint e typecheck passam sem erros.
 
 ## Achados e Validações
 

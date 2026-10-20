@@ -2,7 +2,7 @@
 
 > **Regra de aceite:** cada item só será marcado ao apresentar evidência objetiva (arquivo:linha, saída de comando, relatório ou captura) no mesmo commit validado por todos os papéis.
 >
-> **Dado pendente obrigatoriamente visível:** horário de abertura **[CONFIRMAR horário de abertura]**. Nenhum dado de negócio pode ser inventado.
+> **Horário confirmado pelo proprietário:** atendimento diário, das **10:00 às 02:00** (America/Sao_Paulo). Nenhum outro dado de negócio pode ser inventado.
 
 ## Estrutura e manutenção
 - [x] Projeto Next.js com App Router, TypeScript e Tailwind CSS inicia com `npm run dev`.
@@ -16,14 +16,14 @@
 - [x] WhatsApp usa `https://wa.me/5511948094770`; telefones fixos são (11) 2249-1380 e (11) 2243-0861.
 - [x] Instagram usa `https://www.instagram.com/doceria.lafloresta`.
 - [x] Link de iFood usa exatamente a URL completa confirmada no briefing.
-- [x] Horário declara atendimento diário até 02:00 e exibe o placeholder visível do horário de abertura.
+- [x] Horário declara atendimento diário, das 10:00 às 02:00.
 - [x] Não há preços publicados; a comunicação é “sob consulta”.
 - [x] Texto “Sobre” é curto, acolhedor e identificado como rascunho para revisão do proprietário.
 - [x] Todas as categorias e itens do cardápio do briefing estão presentes; descrições especificadas para os cinco bolos iniciais estão corretas.
 
 ## Interface, conversão e responsividade
 - [x] Header fixo inclui logo, âncoras Cardápio/Encomendas/Sobre/Contato, CTA WhatsApp, badge de status e menu hambúrguer funcional no mobile.
-- [x] Badge “Aberto agora” é calculado de forma honesta sem inventar o horário de abertura; o estado/placeholder deixa a pendência explícita.
+- [x] Badge “Aberto agora” é calculado no fuso America/Sao_Paulo para atendimento diário das 10:00 às 02:00.
 - [x] Hero contém título, slogan e CTAs de WhatsApp (primário) e iFood (secundário).
 - [x] Faixa de confiança contém os quatro diferenciais solicitados.
 - [x] Seção “Mais pedidos” traz exatamente Bolo Floresta Negra, Bolo de Brigadeiro, Torta de Morango e Cheesecake de Amora.

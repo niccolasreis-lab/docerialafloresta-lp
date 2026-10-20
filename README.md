@@ -13,10 +13,10 @@ Acesse `http://localhost:3000`.
 
 ## Onde editar
 
-- Contatos, horário, links sociais e placeholders: `data/business.ts`
+- Contatos, horário e links sociais: `data/business.ts`
 - Categorias e itens do cardápio (sem preços): `data/menu.ts`
 - Cores: `tailwind.config.ts` e `app/globals.css`
 - Placeholder visual do logo: `public/logo.png` (fonte editável em `public/logo-placeholder.svg`; substituir pelo logo oficial quando fornecido)
 - Fotos de produtos: `public/images/`
 
-> O horário de abertura permanece visível como `[CONFIRMAR horário de abertura]` até confirmação do proprietário.
+> Horário confirmado: todos os dias, das 10:00 às 02:00 (America/Sao_Paulo).

@@ -45,6 +45,10 @@ p { margin-top: 0; }
 .header-actions { display: flex; align-items: center; gap: .75rem; }
 .status-badge { display: flex; align-items: center; gap: .4rem; color: var(--muted); font-size: .7rem; font-weight: 800; text-transform: uppercase; white-space: nowrap; }
 .status-badge span { width: .5rem; height: .5rem; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 3px rgba(232, 169, 47, .2); }
+.status-badge.status-open { color: #39713f; }
+.status-badge.status-open span { background: #39713f; box-shadow: 0 0 0 3px rgba(57, 113, 63, .2); }
+.status-badge.status-closed { color: var(--raspberry-dark); }
+.status-badge.status-closed span { background: var(--raspberry); box-shadow: 0 0 0 3px rgba(152, 29, 61, .16); }
 .button { display: inline-flex; min-height: 3.1rem; padding: .75rem 1.2rem; align-items: center; justify-content: center; gap: .55rem; border: 1px solid transparent; font-size: .82rem; font-weight: 800; line-height: 1.2; transition: transform .2s ease, background-color .2s ease, color .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { color: white; background: var(--raspberry); box-shadow: 0 10px 25px rgba(152, 29, 61, .2); }

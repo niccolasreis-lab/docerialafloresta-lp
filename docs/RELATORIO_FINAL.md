@@ -19,8 +19,8 @@ A landing page da **Doceria La Floresta** foi desenvolvida, validada e construí
    - **Veredito:** APROVADO por todos os validadores.
    - **Evidências:** Relatórios em `docs/reports/*-1c-1d.md`.
 
-## Pendência Honesta Explicitamente Visível
-- **Horário de Abertura:** Conforme diretrizes, o horário de abertura permanece explicitamente sinalizado com o marcador oficial: `[CONFIRMAR horário de abertura]`, garantindo que nenhum dado de negócio seja inventado.
+## Horário confirmado
+- **Atendimento:** todos os dias, das 10:00 às 02:00 (America/Sao_Paulo), conforme confirmação posterior do proprietário.
 
 ## Comandos de Execução
 - **Desenvolvimento local:** `npm run dev` (porta 3000)

@@ -41,4 +41,4 @@ Todos os testes de build, lint, checagem de tipos, auditoria de segurança de pr
 
 ## Bloqueios
 
-Nenhum bloqueio técnico ou de conteúdo nesta etapa. O único placeholder pendente permanece visível e correto (`[CONFIRMAR horário de abertura]`).
+Nenhum bloqueio técnico ou de conteúdo nesta etapa. O horário foi posteriormente confirmado pelo proprietário: atendimento diário das 10:00 às 02:00.

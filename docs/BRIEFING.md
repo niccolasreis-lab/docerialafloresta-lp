@@ -20,7 +20,7 @@ Criar uma landing page completa, responsiva e de alta conversão para a **Doceri
 - Endereço: Avenida Guapira, 1650 - Jaçanã, São Paulo - SP, CEP 02265-002
 - WhatsApp / celular: (11) 94809-4770 (`wa.me/5511948094770`)
 - Telefones fixos: (11) 2249-1380 e (11) 2243-0861
-- Horário: aberto todos os dias, até as 02:00 **[CONFIRMAR horário de abertura]**
+- Horário: aberto todos os dias, das 10:00 às 02:00 (confirmado posteriormente pelo proprietário)
 - Instagram: https://www.instagram.com/doceria.lafloresta
 - iFood: https://www.ifood.com.br/delivery/sao-paulo-sp/doceria-la-floresta-tucuruvi/b09689a3-352c-43a3-8387-2dd13de01ab5?UTM_Medium=share
 - Preços: "sob consulta". **NÃO exibir preços**; os botões de cada item levam ao WhatsApp para consultar disponibilidade e valor.

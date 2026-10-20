@@ -5,9 +5,8 @@ export type Business = {
   address: { street: string; neighborhood: string; city: string; state: string; postalCode: string };
   whatsapp: { display: string; number: string };
   phones: readonly string[];
-  hours: { summary: string; openingTime: string; closingTime: string; openingTimeConfirmed: boolean };
+  hours: { summary: string; openingTime: string; closingTime: string };
   social: { instagram: string; ifood: string };
-  placeholders: readonly string[];
 };
 
 export const business: Business = {
@@ -24,14 +23,12 @@ export const business: Business = {
   whatsapp: { display: "(11) 94809-4770", number: "5511948094770" },
   phones: ["(11) 2249-1380", "(11) 2243-0861"],
   hours: {
-    summary: "Aberto todos os dias, até as 02:00",
-    openingTime: "[CONFIRMAR horário de abertura]",
+    summary: "Todos os dias, das 10:00 às 02:00",
+    openingTime: "10:00",
     closingTime: "02:00",
-    openingTimeConfirmed: false,
   },
   social: {
     instagram: "https://www.instagram.com/doceria.lafloresta",
     ifood: "https://www.ifood.com.br/delivery/sao-paulo-sp/doceria-la-floresta-tucuruvi/b09689a3-352c-43a3-8387-2dd13de01ab5?UTM_Medium=share",
   },
-  placeholders: ["[CONFIRMAR horário de abertura]"],
 };

@@ -19,7 +19,7 @@ Data: 20/10/2026
 - Open Graph completo com título, descrição, localidade, tipo, nome do site e imagem real.
 - Twitter Card `summary_large_image` com título, descrição e imagem.
 - JSON-LD na rota `/`, com tipos `Bakery` e `LocalBusiness`, nome, descrição, endereço completo, WhatsApp, dois telefones, redes e horário.
-- O horário de abertura permanece honestamente como `[CONFIRMAR horário de abertura]`; fechamento às 02:00 e funcionamento diário são informados sem inventar dado.
+- O horário foi confirmado posteriormente pelo proprietário: atendimento diário das 10:00 às 02:00.
 - Nenhum domínio/canonical comercial foi inventado, pois não há domínio de produção confirmado no briefing.
 
 ## Validações automatizadas

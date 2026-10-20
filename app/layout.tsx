@@ -67,7 +67,12 @@ const jsonLd = {
     addressCountry: "BR",
   },
   telephone: [business.whatsapp.display, ...business.phones],
-  openingHours: `${business.hours.openingTime} — fechamento às ${business.hours.closingTime}, todos os dias`,
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    opens: business.hours.openingTime,
+    closes: business.hours.closingTime,
+  },
   sameAs: [business.social.instagram, business.social.ifood],
 };
 

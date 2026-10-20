@@ -3,6 +3,7 @@ import { business } from "@/data/business";
 import { menuCategories } from "@/data/menu";
 import { createMenuInquiryUrl, createWhatsAppUrl } from "@/lib/whatsapp";
 import { ArrowIcon, ClockIcon, InstagramIcon, LocationIcon, PhoneIcon, WhatsAppIcon } from "@/components/icons";
+import { BusinessStatusBadge } from "@/components/business-status";
 import { MobileNavigation } from "@/components/mobile-navigation";
 import { MotionReveal } from "@/components/motion-reveal";
 import { ProductPlaceholder } from "@/components/product-placeholder";
@@ -45,7 +46,7 @@ export default function Home() {
             <a href="#cardapio">Cardápio</a><a href="#encomendas">Encomendas</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
           </nav>
           <div className="header-actions">
-            <span className="status-badge" title={business.hours.openingTime}><span aria-hidden="true" /> Status pendente</span>
+            <BusinessStatusBadge />
             <ExternalLink href={whatsappUrl} className="button button-primary header-cta"><WhatsAppIcon /> Pedir agora</ExternalLink>
             <MobileNavigation />
           </div>
@@ -156,7 +157,7 @@ export default function Home() {
 
         <section className="section contact-section" id="contato"><div className="container contact-grid">
           <MotionReveal className="contact-copy"><p className="eyebrow">Venha nos visitar</p><h2>Estamos no coração do Jaçanã</h2>
-            <div className="contact-list"><div><LocationIcon /><p><strong>Endereço</strong>{business.address.street}<br />{business.address.neighborhood}, {business.address.city} - {business.address.state}<br />CEP {business.address.postalCode}</p></div><div><ClockIcon /><p><strong>Horário</strong>{business.hours.summary}<br /><mark>{business.hours.openingTime}</mark></p></div><div><PhoneIcon /><p><strong>Telefones</strong>{business.phones.map((phone) => <span key={phone}>{phone}</span>)}<span>WhatsApp: {business.whatsapp.display}</span></p></div></div>
+            <div className="contact-list"><div><LocationIcon /><p><strong>Endereço</strong>{business.address.street}<br />{business.address.neighborhood}, {business.address.city} - {business.address.state}<br />CEP {business.address.postalCode}</p></div><div><ClockIcon /><p><strong>Horário</strong>{business.hours.summary}</p></div><div><PhoneIcon /><p><strong>Telefones</strong>{business.phones.map((phone) => <span key={phone}>{phone}</span>)}<span>WhatsApp: {business.whatsapp.display}</span></p></div></div>
             <div className="contact-actions"><ExternalLink href={whatsappUrl} className="button button-primary"><WhatsAppIcon /> WhatsApp</ExternalLink><ExternalLink href={business.social.ifood} className="button button-outline">iFood</ExternalLink><ExternalLink href={business.social.instagram} className="button button-outline"><InstagramIcon /> Instagram</ExternalLink></div>
           </MotionReveal>
           <MotionReveal className="map-card"><iframe title="Mapa da Doceria La Floresta na Avenida Guapira, 1650" src={mapUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /><ExternalLink href={mapDirectionsUrl} className="map-link"><LocationIcon /> Abrir rota no Google Maps <ArrowIcon /></ExternalLink></MotionReveal>

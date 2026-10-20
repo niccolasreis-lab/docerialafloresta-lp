@@ -24,7 +24,7 @@ Atualizar `next` para uma versão suportada que não inclua PostCSS vulnerável,
 | Área | Evidência | Resultado |
 |---|---|---|
 | Segredos | Busca no commit por padrões de chaves, tokens, senhas e chaves privadas não encontrou segredos. `.gitignore` cobre `.env*`. | Aprovado |
-| Dados e URLs | `data/business.ts` reproduz WhatsApp, telefones, endereço, Instagram e iFood do briefing. O horário de abertura permanece visível como `[CONFIRMAR horário de abertura]`. | Aprovado |
+| Dados e URLs | `data/business.ts` reproduz WhatsApp, telefones, endereço, Instagram e iFood do briefing. O horário foi posteriormente confirmado como atendimento diário das 10:00 às 02:00. | Aprovado |
 | Helper WhatsApp | `lib/whatsapp.ts` remove caracteres não numéricos, valida 8–15 dígitos, cria URL sob base fixa `https://wa.me/` e usa `URLSearchParams` para codificar `text`. `createMenuInquiryUrl` rejeita nome vazio. | Aprovado |
 | HTML inseguro | Não há uso de `dangerouslySetInnerHTML` no commit. | Aprovado |
 | Links externos | Não há links com `target="_blank"` nesta etapa; portanto não há ocorrência sem `rel="noopener noreferrer"`. | Aprovado |
