@@ -26,7 +26,7 @@ Criar uma landing page completa, responsiva e de alta conversão para a **Doceri
 - Preços: "sob consulta". **NÃO exibir preços**; os botões de cada item levam ao WhatsApp para consultar disponibilidade e valor.
 
 ## Identidade visual
-- Logo: fundo laranja/amarelo estilo “sunburst” com o texto “La Floresta” em preto (versão do Hubt) e versão circular carmim com “La Floresta” em branco (versão do Instagram). Usar como placeholder `/public/logo.png`.
+- Logo: fundo laranja/amarelo estilo “sunburst” com o texto “La Floresta” em preto (versão do Hubt) e versão circular carmim com “La Floresta” em branco (versão do Instagram). Usar como placeholder `/public/logo-placeholder.svg`.
 - Paleta: carmim/vermelho-framboesa (primária, igual ao logo do Instagram), creme quente (fundo), marrom-cacau (texto) e laranja-dourado (destaques). Remete a morango, chocolate e confeitaria artesanal.
 - Tipografia: títulos com serifa elegante (ex.: Playfair Display), corpo em sans-serif legível (ex.: Inter ou Nunito).
 - Tom de voz: acolhedor, tradicional, de bairro, “feito com carinho”; frases curtas em português do Brasil.

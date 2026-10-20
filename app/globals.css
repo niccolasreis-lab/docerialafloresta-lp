@@ -6,7 +6,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--cream); color: var(--cocoa); font-family: Arial, sans-serif; }
-:focus-visible { outline: 3px solid #efae32; outline-offset: 3px; }
+:focus-visible { outline: 3px solid #9d1e3d; outline-offset: 3px; }
 .site-shell { max-width: 72rem; margin: 0 auto; padding: 4rem 1.5rem; }
 h1 { font-family: Georgia, serif; color: var(--raspberry); }
 .eyebrow, .placeholder { color: var(--raspberry); font-weight: 700; }

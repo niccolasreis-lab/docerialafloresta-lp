@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Placeholder da marca Doceria La Floresta</title>
+  <description id="description">Imagem temporária em carmim, creme e dourado; substituir pelo logo oficial.</description>
+  <rect width="512" height="512" rx="80" fill="#FFF7E8"/>
+  <circle cx="256" cy="220" r="154" fill="#9D1E3D"/>
+  <path d="M164 250c24-55 61-84 92-84s68 29 92 84c-53 34-131 34-184 0Z" fill="#EFAE32"/>
+  <path d="M182 247h148c0 55-33 91-74 91s-74-36-74-91Z" fill="#FFF7E8"/>
+  <circle cx="256" cy="151" r="21" fill="#EFAE32"/>
+  <text x="256" y="416" text-anchor="middle" fill="#43251D" font-family="Arial, sans-serif" font-size="28" font-weight="700">LOGO EM CONFIRMAÇÃO</text>
+  <text x="256" y="450" text-anchor="middle" fill="#9D1E3D" font-family="Arial, sans-serif" font-size="20">Doceria La Floresta</text>
+</svg>
