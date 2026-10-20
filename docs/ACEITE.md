@@ -5,21 +5,21 @@
 > **Dado pendente obrigatoriamente visível:** horário de abertura **[CONFIRMAR horário de abertura]**. Nenhum dado de negócio pode ser inventado.
 
 ## Estrutura e manutenção
-- [ ] Projeto Next.js com App Router, TypeScript e Tailwind CSS inicia com `npm run dev`.
-- [ ] Dados editáveis e centralizados em `data/business.ts` e `data/menu.ts`.
-- [ ] Estrutura prevista: `app/` (rotas, layout e metadata), `components/` (seções/UI), `data/`, `public/images/`, `public/logo.png`, `docs/reports/` e testes de interface.
-- [ ] README explica como editar contatos, cardápio, cores e imagens.
-- [ ] Imagens ausentes usam placeholder explicitamente identificado e com linguagem visual da marca; nenhuma área azul vazia.
+- [x] Projeto Next.js com App Router, TypeScript e Tailwind CSS inicia com `npm run dev`.
+- [x] Dados editáveis e centralizados em `data/business.ts` e `data/menu.ts`.
+- [x] Estrutura prevista: `app/` (rotas, layout e metadata), `components/` (seções/UI), `data/`, `public/images/`, `public/logo.png`, `docs/reports/` e testes de interface.
+- [x] README explica como editar contatos, cardápio, cores e imagens.
+- [x] Imagens ausentes usam placeholder explicitamente identificado e com linguagem visual da marca; nenhuma área azul vazia.
 
 ## Dados e conteúdo
-- [ ] Nome, complemento “Doces e Sorvetes”, slogan, endereço e CEP correspondem exatamente ao briefing.
-- [ ] WhatsApp usa `https://wa.me/5511948094770`; telefones fixos são (11) 2249-1380 e (11) 2243-0861.
-- [ ] Instagram usa `https://www.instagram.com/doceria.lafloresta`.
-- [ ] Link de iFood usa exatamente a URL completa confirmada no briefing.
-- [ ] Horário declara atendimento diário até 02:00 e exibe o placeholder visível do horário de abertura.
-- [ ] Não há preços publicados; a comunicação é “sob consulta”.
-- [ ] Texto “Sobre” é curto, acolhedor e identificado como rascunho para revisão do proprietário.
-- [ ] Todas as categorias e itens do cardápio do briefing estão presentes; descrições especificadas para os cinco bolos iniciais estão corretas.
+- [x] Nome, complemento “Doces e Sorvetes”, slogan, endereço e CEP correspondem exatamente ao briefing.
+- [x] WhatsApp usa `https://wa.me/5511948094770`; telefones fixos são (11) 2249-1380 e (11) 2243-0861.
+- [x] Instagram usa `https://www.instagram.com/doceria.lafloresta`.
+- [x] Link de iFood usa exatamente a URL completa confirmada no briefing.
+- [x] Horário declara atendimento diário até 02:00 e exibe o placeholder visível do horário de abertura.
+- [x] Não há preços publicados; a comunicação é “sob consulta”.
+- [x] Texto “Sobre” é curto, acolhedor e identificado como rascunho para revisão do proprietário.
+- [x] Todas as categorias e itens do cardápio do briefing estão presentes; descrições especificadas para os cinco bolos iniciais estão corretas.
 
 ## Interface, conversão e responsividade
 - [ ] Header fixo inclui logo, âncoras Cardápio/Encomendas/Sobre/Contato, CTA WhatsApp, badge de status e menu hambúrguer funcional no mobile.
