@@ -31,8 +31,12 @@ const Card: FC<iCardProps> = ({ title, description, color, textColor, i, src, li
         </p>
         <h3 className="font-serif text-4xl font-black leading-none tracking-tight md:text-6xl" style={{ color: textColor }}>{title}</h3>
         <p className="mt-4 max-w-lg text-base font-medium leading-relaxed md:text-xl" style={{ color: textColor }}>{description}</p>
-        <a className="mt-5 inline-flex min-h-11 items-center border border-white/60 px-4 text-sm font-bold text-white transition hover:bg-white hover:text-[#3f261f]" href={link}>
-          Ver no cardápio <span aria-hidden="true">→</span>
+        <a
+          className="mt-5 inline-flex min-h-11 items-center border border-white/60 px-4 text-sm font-bold text-white transition hover:bg-white hover:text-[#3f261f]"
+          href={link}
+          aria-label={`Ver ${tag} no cardápio`}
+        >
+          Ver {tag} no cardápio <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>
