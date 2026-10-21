@@ -8,6 +8,7 @@ import { MobileNavigation } from "@/components/mobile-navigation";
 import { MotionReveal } from "@/components/motion-reveal";
 import { ProductPlaceholder } from "@/components/product-placeholder";
 import { MenuSection } from "@/components/menu-section";
+import { CardsParallax, type iCardItem } from "@/components/ui/scroll-cards";
 
 const whatsappUrl = createWhatsAppUrl("Olá! Gostaria de fazer um pedido na Doceria La Floresta.");
 const quoteUrl = createWhatsAppUrl("Olá! Gostaria de pedir um orçamento para encomenda.");
@@ -26,6 +27,13 @@ const featuredItems = [
 ].filter((item) => item !== undefined);
 
 const trustItems = ["+20 anos de tradição", "Bolos, doces, salgados e sorvetes", "Aberto todos os dias", "Delivery pelo iFood"];
+
+const visualMenuHighlights: iCardItem[] = [
+  { title: "Docinhos para celebrar", description: "Brigadeiros, beijinhos e outras escolhas para tornar encontros ainda mais doces.", tag: "docinhos", src: "/images/category-covers/docinhos.webp", link: "#cardapio", color: "#3f261f", textColor: "#fffdfa" },
+  { title: "Bolos feitos para compartilhar", description: "Opções tradicionais para aniversários, comemorações e os momentos especiais do dia.", tag: "bolos", src: "/images/category-covers/bolos.webp", link: "#cardapio", color: "#3f261f", textColor: "#fffdfa" },
+  { title: "Salgados a qualquer hora", description: "Uma seleção dourada e saborosa para acompanhar uma pausa, reunião ou festa.", tag: "salgados", src: "/images/category-covers/salgados.webp", link: "#cardapio", color: "#3f261f", textColor: "#fffdfa" },
+  { title: "Açaí e sorvetes", description: "Sabores gelados para refrescar o seu dia, com opções para todos os momentos.", tag: "sorvetes", src: "/images/category-covers/sorvetes-acai.webp", link: "#cardapio", color: "#3f261f", textColor: "#fffdfa" },
+];
 
 type ExternalLinkProps = { href: string; className: string; children: React.ReactNode; label?: string };
 function ExternalLink({ href, className, children, label }: ExternalLinkProps) {
@@ -106,6 +114,15 @@ export default function Home() {
         </div></section>
 
         <MenuSection />
+
+        <section className="scroll-cards-section" aria-labelledby="sabores-em-destaque">
+          <div className="container scroll-cards-heading">
+            <p className="eyebrow">Escolhas da casa</p>
+            <h2 id="sabores-em-destaque">Sabores para cada momento</h2>
+            <p>Deslize para conhecer algumas das categorias que fazem parte da nossa vitrine.</p>
+          </div>
+          <CardsParallax items={visualMenuHighlights} />
+        </section>
 
         <section className="section order-section" id="encomendas"><div className="container order-grid">
           <MotionReveal className="order-visual"><ProductPlaceholder image="/images/products/bolo-de-nozes.webp" label="Bolo de Nozes para encomendas" context="order" position="center 45%" /></MotionReveal>

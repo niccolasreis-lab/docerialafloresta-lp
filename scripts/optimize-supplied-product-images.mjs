@@ -1,9 +1,25 @@
-import { cp, mkdir, readdir } from "node:fs/promises";
+import { access, cp, mkdir, readdir } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
-const suppliedDirectory = path.resolve("imagens de produtos ");
+const localSuppliedDirectory = path.resolve("imagens de produtos ");
 const originalsDirectory = path.resolve("public/images/originals/supplied-products");
+const categoryOriginalsDirectory = path.resolve("public/images/originals/supplied-category-covers");
+
+async function exists(directory) {
+  try {
+    await access(directory);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// A local drop-folder is convenient during curation. Committed originals are
+// the reproducible fallback for fresh clones and CI worktrees.
+const suppliedDirectory = await exists(localSuppliedDirectory)
+  ? localSuppliedDirectory
+  : originalsDirectory;
 const outputDirectory = path.resolve("public/images/products");
 const categoryOutputDirectory = path.resolve("public/images/category-covers");
 
@@ -64,23 +80,28 @@ const normalize = (value) => value
 
 await Promise.all([
   mkdir(originalsDirectory, { recursive: true }),
+  mkdir(categoryOriginalsDirectory, { recursive: true }),
   mkdir(outputDirectory, { recursive: true }),
   mkdir(categoryOutputDirectory, { recursive: true }),
 ]);
 const suppliedFiles = (await readdir(suppliedDirectory)).filter((file) => /\.png$/i.test(file));
+const useLocalDropFolder = suppliedDirectory === localSuppliedDirectory;
 const resolved = [];
 
 for (const [slug, hint] of Object.entries(imageSources)) {
-  const matches = suppliedFiles.filter((file) => normalize(file).includes(hint));
-  if (matches.length !== 1) throw new Error(`Fonte ambígua ou ausente para ${slug}: ${hint} (${matches.join(", ") || "nenhuma"})`);
+  const inputName = useLocalDropFolder
+    ? suppliedFiles.filter((file) => normalize(file).includes(hint))[0]
+    : `${slug}.png`;
+  if (!inputName || (useLocalDropFolder && suppliedFiles.filter((file) => normalize(file).includes(hint)).length !== 1)) {
+    throw new Error(`Fonte ambígua ou ausente para ${slug}: ${hint}`);
+  }
 
-  const inputName = matches[0];
-  const originalName = `${slug}.png`;
-  const originalPath = path.join(originalsDirectory, originalName);
+  const sourcePath = path.join(suppliedDirectory, inputName);
+  const originalPath = path.join(originalsDirectory, `${slug}.png`);
   const outputPath = path.join(outputDirectory, `supplied-${slug}.webp`);
 
-  await cp(path.join(suppliedDirectory, inputName), originalPath);
-  const info = await sharp(originalPath, { failOn: "warning" })
+  if (useLocalDropFolder) await cp(sourcePath, originalPath);
+  const info = await sharp(sourcePath, { failOn: "warning" })
     .resize({ width: 1024, height: 1024, fit: "inside", withoutEnlargement: true })
     .webp({ quality: 88, chromaSubsampling: "4:4:4", smartSubsample: true })
     .toFile(outputPath);
@@ -90,16 +111,21 @@ for (const [slug, hint] of Object.entries(imageSources)) {
 
 const categoryCovers = [];
 for (const [categoryId, hint] of Object.entries(categorySources)) {
-  const matches = suppliedFiles.filter((file) => normalize(file).includes(hint));
-  if (matches.length !== 1) throw new Error(`Fonte ambígua ou ausente para capa ${categoryId}: ${hint} (${matches.join(", ") || "nenhuma"})`);
+  const matches = useLocalDropFolder ? suppliedFiles.filter((file) => normalize(file).includes(hint)) : [];
+  const sourcePath = useLocalDropFolder
+    ? path.join(localSuppliedDirectory, matches[0] ?? "")
+    : path.join(categoryOriginalsDirectory, `${categoryId}.png`);
+  if ((useLocalDropFolder && matches.length !== 1) || !(await exists(sourcePath))) {
+    throw new Error(`Fonte ambígua ou ausente para capa ${categoryId}: ${hint}`);
+  }
 
-  const source = matches[0];
+  if (useLocalDropFolder) await cp(sourcePath, path.join(categoryOriginalsDirectory, `${categoryId}.png`));
   const outputPath = path.join(categoryOutputDirectory, `${categoryId}.webp`);
-  const info = await sharp(path.join(suppliedDirectory, source), { failOn: "warning" })
+  const info = await sharp(sourcePath, { failOn: "warning" })
     .resize({ width: 512, height: 512, fit: "cover", position: "attention" })
     .webp({ quality: 88, chromaSubsampling: "4:4:4", smartSubsample: true })
     .toFile(outputPath);
-  categoryCovers.push({ categoryId, source, output: path.basename(outputPath), dimensions: `${info.width}x${info.height}` });
+  categoryCovers.push({ categoryId, source: path.basename(sourcePath), output: path.basename(outputPath), dimensions: `${info.width}x${info.height}` });
 }
 
 console.table(resolved);
