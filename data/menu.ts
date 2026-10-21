@@ -15,12 +15,14 @@ export type ProductImagePosition =
   | "52% center";
 
 export type ProductImageFit = "cover" | "contain";
+export type ProductImageKind = "photo" | "illustration";
 
 export type MenuItem = {
   slug: string;
   name: string;
   description: string;
-  image: string | null;
+  image: string;
+  imageKind: ProductImageKind;
   imagePosition?: ProductImagePosition;
   imageFit?: ProductImageFit;
   availabilityNote?: string;
@@ -29,6 +31,7 @@ export type MenuItem = {
 export type MenuCategory = {
   id: MenuCategoryId;
   name: string;
+  image: string;
   servingNote?: string;
   items: readonly MenuItem[];
 };
@@ -72,7 +75,8 @@ const item = (
     slug,
     name,
     description,
-    image: imageMetadata?.image ?? null,
+    image: imageMetadata?.image ?? `/images/generated/products/${slug}.svg`,
+    imageKind: imageMetadata ? "photo" : "illustration",
     ...(imageMetadata?.imagePosition ? { imagePosition: imageMetadata.imagePosition } : {}),
     ...(imageMetadata?.imageFit ? { imageFit: imageMetadata.imageFit } : {}),
     ...(availabilityNote ? { availabilityNote } : {}),
@@ -115,6 +119,7 @@ export const menuCategories: readonly MenuCategory[] = [
   {
     id: "bolos",
     name: "Bolos",
+    image: "/images/generated/categories/bolos.svg",
     servingNote: "Serve aproximadamente 12 pessoas · sob consulta",
     items: [
       "Bolo Floresta Negra", "Bolo de Nozes", "Bolo de Brigadeiro", "Bolo de Leite Ninho", "Bolo Rigo", "Bolo de Doce de Leite com Morango", "Bolo de Abacaxi", "Bolo de Abacaxi com Coco", "Bolo de Limão", "Bolo de Chocolate com Morango", "Bolo Diplomata", "Bolo de Doce de Leite com Ameixa", "Bolo Folhado de Morango", "Bolo Floresta Branca", "Bolo de Frutas", "Bolo de Kit-Kat", "Bolo de Creme de Leite Ninho", "Bolo Maracolate", "Bolo de Maracujá", "Bolo Mil Folhas", "Bolo de Morango", "Bolo Paris", "Bolo de Creme de Coco", "Bolo Sonho de Valsa", "Bolo Trufado", "Bolo de Kit-Kat com Morango", "Bolo de Morango com Cobertura de Chantilly",
@@ -123,6 +128,7 @@ export const menuCategories: readonly MenuCategory[] = [
   {
     id: "doces",
     name: "Doces",
+    image: "/images/generated/categories/doces.svg",
     servingNote: "Unidade · sob consulta",
     items: [
       "Bolo de Brigadeiro", "Bolo de Nozes", "Bolo Prestígio", "Bolo Rigo", "Bolo de Leite Ninho", "Bolo Mil Folhas", "Bomba de Baunilha", "Bomba de Chocolate", "Bomba de Doce de Leite", "Cheesecake de Amora", "Cheesecake de Goiabada", "Cheesecake de Doce de Leite", "Cheesecake de Chocolate", "Cheesecake de Morango", "Cheesecake de Oreo", "Pudim de Leite Condensado", "Torta de Morango", "Torta de Limão", "Torta Holandesa", "Torta Paçoquinha", "Bolo Red Velvet", "Bolo Trufado", "Bolo de Coco", "Bolo Floresta Negra", "Quindim", "Torta Negresco com Limão", "Beijão", "Brigadeirão", "Carolina de Doce de Leite", "Coxinha de Brigadeiro com Morango", "Pirulito de Brigadeiro", "Mousse de Chocolate", "Mousse de Maracujá", "Pavê de Morango", "Pavê Tradicional", "Canudo de Doce de Leite", "Espeto de Morango com Chocolate", "Pote Negresco com Limão", "Nega Maluca Grande", "Camafeu de Nozes Grande", "Alfajor",
@@ -131,24 +137,28 @@ export const menuCategories: readonly MenuCategory[] = [
   {
     id: "docinhos",
     name: "Docinhos",
+    image: "/images/generated/categories/docinhos.svg",
     servingNote: "Sob consulta",
     items: ["Beijinho", "Brigadeiro", "Brigadeiro de Colher", "Cone de Doce de Leite", "Casadinho", "Dan Top", "Camafeu de Nozes", "Nega Maluca Pequena", "Bombom de Brigadeiro", "Bombom Negresco", "Bombom de Prestígio", "Bicho de Pé", "Cajuzinho", "Olho de Sogra"].map(partySweetItem),
   },
   {
     id: "tortas-doces",
     name: "Tortas doces",
+    image: "/images/generated/categories/tortas-doces.svg",
     servingNote: "8 fatias · sob consulta",
     items: ["Cheesecake de Amora", "Pudim de Leite Condensado", "Torta Dois Sabores", "Torta Paçoquinha", "Torta de Morango", "Torta Holandesa", "Cheesecake de Goiabada", "Torta de Limão", "Torta Negresco", "Torta de Banana Folhada", "Torta de Frutas", "Torta de Maçã Folhada", "Quindão"].map(pieItem),
   },
   {
     id: "salgados",
     name: "Salgados",
+    image: "/images/generated/categories/salgados.svg",
     servingNote: "Sob consulta",
     items: ["Empada de Palmito", "Bolinho de Carne", "Coxinha de Frango", "Coxinha de Frango com Catupiry", "Enroladinho de Salsicha", "Mini Salgados (30 un.)", "Risoles de Queijo", "Risoles de Presunto e Queijo", "Torta de Frango (fatia e inteira, 12 fatias)", "Bolinha de Queijo", "Empada de Frango", "Assado de Frango"].map(savoryItem),
   },
   {
     id: "sorvetes-acai",
     name: "Sorvetes e Açaí",
+    image: "/images/generated/categories/sorvetes-acai.svg",
     servingNote: "Sorvetes 200g · sob consulta",
     items: ["Uva", "Pistache", "Passas ao Rum", "Papaya", "Morango", "Limão", "Leite Condensado", "Iogurte com Framboesa", "Crocante", "Coco", "Chiclete", "Cereja", "Menta com Flocos", "Maracujá", "Maçã Verde", "Tangerina", "Creme", "Flocos", "Chocolate", "Banana", "Abacaxi"].map(iceCreamItem).concat([
       item("Açaí com Morango", "Açaí com morango em porção de 250g, com complementos.", "250g + complementos"),
@@ -157,6 +167,7 @@ export const menuCategories: readonly MenuCategory[] = [
   {
     id: "bebidas",
     name: "Bebidas",
+    image: "/images/generated/categories/bebidas.svg",
     servingNote: "Sob consulta",
     items: ["Coca-Cola", "Guaraná Antarctica", "Fanta", "Schweppes", "Sufresh", "Água mineral", "Água com gás", "Água de coco", "H2OH!", "Cerveja Skol", "Cerveja Itaipava", "Água tônica", "Café expresso"].map(beverageItem),
   },

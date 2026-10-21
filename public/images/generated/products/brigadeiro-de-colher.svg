@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
+<title id="title">Ilustração de Brigadeiro de Colher</title>
+<desc id="description">Arte editorial identificada como ilustração; não representa uma fotografia do produto.</desc>
+<rect width="1200" height="900" fill="#f9ead4"/>
+<circle cx="194" cy="174" r="250" fill="#84364d" opacity=".08"/>
+<circle cx="1016" cy="274" r="190" fill="#c98a2a" opacity=".16"/>
+<path d="M0 800C220 690 380 850 610 770s380-70 590 30v100H0z" fill="#84364d" opacity=".08"/>
+<rect x="64" y="58" width="1072" height="784" rx="42" fill="none" stroke="#84364d" stroke-opacity=".18" stroke-width="4"/>
+<g transform="translate(0 -35)"><g fill="none" stroke="#35231f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M475 420h250l-32 180H507z" fill="#c98a2a" fill-opacity=".5"/><path d="M510 420c30-85 150-85 180 0" fill="#c98a2a" fill-opacity=".75"/><path d="M680 320l105-105M705 340l-30-30"/><circle cx="545" cy="395" r="8" fill="#fff8ed"/><circle cx="600" cy="375" r="8" fill="#fff8ed"/><circle cx="655" cy="400" r="8" fill="#fff8ed"/></g></g>
+<text x="600" y="722" text-anchor="middle" fill="#84364d" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Brigadeiro de Colher</text>
+<g transform="translate(465 808)"><rect width="270" height="42" rx="21" fill="#84364d"/><text x="135" y="28" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ILUSTRAÇÃO</text></g>
+</svg>

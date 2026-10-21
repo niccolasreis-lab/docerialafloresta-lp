@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
+<title id="title">Ilustração de Pavê Tradicional</title>
+<desc id="description">Arte editorial identificada como ilustração; não representa uma fotografia do produto.</desc>
+<rect width="1200" height="900" fill="#fff8ed"/>
+<circle cx="159" cy="139" r="250" fill="#981d3d" opacity=".08"/>
+<circle cx="1051" cy="239" r="190" fill="#e8a92f" opacity=".16"/>
+<path d="M0 800C220 690 380 850 610 770s380-70 590 30v100H0z" fill="#981d3d" opacity=".08"/>
+<rect x="64" y="58" width="1072" height="784" rx="42" fill="none" stroke="#981d3d" stroke-opacity=".18" stroke-width="4"/>
+<g transform="translate(0 -35)"><g fill="none" stroke="#3f261f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M365 560h470"/><path d="M420 535l100-235h300l-105 235z" fill="#e8a92f" fill-opacity=".45"/><path d="M485 405h275M455 475h275"/><path d="M520 300l195 235"/></g></g>
+<text x="600" y="722" text-anchor="middle" fill="#981d3d" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Pavê Tradicional</text>
+<g transform="translate(465 808)"><rect width="270" height="42" rx="21" fill="#981d3d"/><text x="135" y="28" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ILUSTRAÇÃO</text></g>
+</svg>

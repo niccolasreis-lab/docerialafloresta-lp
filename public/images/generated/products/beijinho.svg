@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
+<title id="title">Ilustração de Beijinho</title>
+<desc id="description">Arte editorial identificada como ilustração; não representa uma fotografia do produto.</desc>
+<rect width="1200" height="900" fill="#f8e9d8"/>
+<circle cx="206" cy="186" r="250" fill="#713247" opacity=".08"/>
+<circle cx="1004" cy="286" r="190" fill="#d89b36" opacity=".16"/>
+<path d="M0 800C220 690 380 850 610 770s380-70 590 30v100H0z" fill="#713247" opacity=".08"/>
+<rect x="64" y="58" width="1072" height="784" rx="42" fill="none" stroke="#713247" stroke-opacity=".18" stroke-width="4"/>
+<g transform="translate(0 -35)"><g fill="none" stroke="#422a24" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M425 535c0-126 78-205 175-205s175 79 175 205" fill="#d89b36" fill-opacity=".5"/><path d="M405 535h390l-38 92H443z"/><path d="M490 367l-34-55M600 330v-66M710 367l34-55"/></g><path d="M510 390l20 13M555 365l18 16M610 360l17 18M660 385l20 12M695 425l20 6" stroke="#fff8ed" stroke-width="12" stroke-linecap="round"/><path d="M600 348v-38" stroke="#617348" stroke-width="12"/><path d="M600 310l-22-23M600 310l22-23" stroke="#617348" stroke-width="10"/></g>
+<text x="600" y="722" text-anchor="middle" fill="#713247" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Beijinho</text>
+<g transform="translate(465 808)"><rect width="270" height="42" rx="21" fill="#713247"/><text x="135" y="28" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ILUSTRAÇÃO</text></g>
+</svg>

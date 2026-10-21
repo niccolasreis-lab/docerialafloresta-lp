@@ -42,3 +42,23 @@ Os originais possuem no máximo 512 px no maior eixo. Portanto, o redimensioname
 - `bolo-de-morango-com-cobertura-de-chantilly`: Bolo de Morango com Cobertura de Chantilly
 - `torta-de-morango`: Torta de Morango
 - `cheesecake-de-amora`: Cheesecake de Amora
+
+## Ilustrações geradas para lacunas do catálogo
+
+Os itens sem fotografia oficial usam artes editoriais SVG em `public/images/generated/products/`. As sete categorias usam capas próprias em `public/images/generated/categories/`.
+
+```bash
+npm run images:generate
+```
+
+O script versionado `scripts/generate-menu-illustrations.mjs` gera deterministicamente os arquivos a partir dos slugs e categorias de `data/menu.ts`. Ele não consulta serviços externos nem tenta simular fotografias. Cada arte de produto contém a identificação visual **ILUSTRAÇÃO**, e a interface reforça **Imagem ilustrativa**. Assim, a cobertura visual do cardápio não cria uma falsa representação fotográfica do produto.
+
+Inventário atual:
+
+- 142 entradas distribuídas entre 7 categorias;
+- 128 produtos únicos (14 entradas são repetições entre categorias);
+- 13 produtos únicos com fotografia oficial;
+- 115 produtos únicos com ilustração gerada;
+- 7 capas ilustradas de categoria.
+
+As ilustrações são derivadas de dados do próprio cardápio e podem ser regeneradas. Fotografias oficiais nunca são sobrescritas pelo gerador.

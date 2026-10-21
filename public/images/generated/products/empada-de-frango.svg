@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
+<title id="title">Ilustração de Empada de Frango</title>
+<desc id="description">Arte editorial identificada como ilustração; não representa uma fotografia do produto.</desc>
+<rect width="1200" height="900" fill="#f8e9d8"/>
+<circle cx="182" cy="162" r="250" fill="#713247" opacity=".08"/>
+<circle cx="1028" cy="262" r="190" fill="#d89b36" opacity=".16"/>
+<path d="M0 800C220 690 380 850 610 770s380-70 590 30v100H0z" fill="#713247" opacity=".08"/>
+<rect x="64" y="58" width="1072" height="784" rx="42" fill="none" stroke="#713247" stroke-opacity=".18" stroke-width="4"/>
+<g transform="translate(0 -35)"><g fill="none" stroke="#422a24" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M415 555h370"/><path d="M445 535c0-170 70-255 155-255s155 85 155 255" fill="#d89b36" fill-opacity=".45"/><path d="M485 440c75 32 155 32 230 0"/></g></g>
+<text x="600" y="722" text-anchor="middle" fill="#713247" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Empada de Frango</text>
+<g transform="translate(465 808)"><rect width="270" height="42" rx="21" fill="#713247"/><text x="135" y="28" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ILUSTRAÇÃO</text></g>
+</svg>

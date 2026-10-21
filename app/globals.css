@@ -83,8 +83,9 @@ p { margin-top: 0; }
 .hero-decoration-two { right: 32%; bottom: -12rem; width: 22rem; height: 22rem; }
 .product-placeholder { position: relative; overflow: hidden; width: 100%; aspect-ratio: 4 / 3; background: var(--cream-deep); }
 .product-placeholder img { transition: transform .45s ease; }
-.product-image-contain { background: var(--white); }
+.product-image-contain { background: var(--cream); }
 .product-image-contain img { padding: .6rem; }
+.product-image-illustration img { object-fit: contain !important; padding: .45rem; }
 .product-placeholder > span { position: absolute; right: .8rem; bottom: .8rem; padding: .3rem .55rem; color: var(--cocoa); background: rgba(255,248,237,.92); font-size: .63rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 
 .trust-strip { color: var(--cream); background: var(--cocoa); }
@@ -190,8 +191,7 @@ p { margin-top: 0; }
 .menu-tabs { display: flex; width: max-content; min-width: 100%; padding: .25rem .75rem 1rem; justify-content: center; gap: clamp(.8rem, 2.5vw, 2rem); }
 .menu-tab { display: grid; width: 7.2rem; padding: 0; border: 0; color: var(--cocoa); background: transparent; place-items: center; gap: .75rem; font: inherit; font-size: .75rem; font-weight: 800; cursor: pointer; scroll-snap-align: center; white-space: normal; }
 .menu-tab-image { position: relative; display: block; overflow: hidden; width: 6rem; height: 6rem; border: 3px solid var(--white); border-radius: 50%; background: var(--cream); box-shadow: 0 8px 20px rgba(63,38,31,.12); transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
-.menu-tab-image img { object-fit: cover; transition: transform .25s ease; }
-.menu-tab-placeholder { position: absolute; right: .25rem; bottom: .55rem; left: .25rem; padding: .1rem; border-radius: 1rem; color: var(--cocoa); background: rgba(255,248,237,.92); font-size: .43rem; line-height: 1.1; letter-spacing: .04em; text-align: center; text-transform: uppercase; }
+.menu-tab-image img { object-fit: contain; padding: .45rem; transition: transform .25s ease; }
 .menu-tab:hover, .menu-tab.active { color: var(--raspberry-dark); }
 .menu-tab:hover .menu-tab-image, .menu-tab.active .menu-tab-image { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(152,29,61,.18); }
 .menu-tab.active .menu-tab-image { outline: 3px solid var(--raspberry); outline-offset: 3px; }

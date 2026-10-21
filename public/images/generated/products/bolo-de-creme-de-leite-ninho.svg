@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
+<title id="title">Ilustração de Bolo de Creme de Leite Ninho</title>
+<desc id="description">Arte editorial identificada como ilustração; não representa uma fotografia do produto.</desc>
+<rect width="1200" height="900" fill="#f9ead4"/>
+<circle cx="148" cy="128" r="250" fill="#84364d" opacity=".08"/>
+<circle cx="1062" cy="228" r="190" fill="#c98a2a" opacity=".16"/>
+<path d="M0 800C220 690 380 850 610 770s380-70 590 30v100H0z" fill="#84364d" opacity=".08"/>
+<rect x="64" y="58" width="1072" height="784" rx="42" fill="none" stroke="#84364d" stroke-opacity=".18" stroke-width="4"/>
+<g transform="translate(0 -35)"><g fill="none" stroke="#35231f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M385 570h430"/><path d="M430 550l40-220h260l40 220z" fill="#c98a2a" fill-opacity=".45"/><path d="M450 420h300M465 490h270"/><path d="M470 330c35-80 95-105 130-45 35-60 95-35 130 45"/></g></g>
+<text x="600" y="690" text-anchor="middle" fill="#84364d" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Bolo de Creme de Leite</text><text x="600" y="756" text-anchor="middle" fill="#84364d" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Ninho</text>
+<g transform="translate(465 808)"><rect width="270" height="42" rx="21" fill="#84364d"/><text x="135" y="28" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ILUSTRAÇÃO</text></g>
+</svg>

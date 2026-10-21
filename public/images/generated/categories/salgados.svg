@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title description">
+<title id="title">Categoria Salgados</title>
+<desc id="description">Ilustração editorial para identificar a categoria.</desc>
+<rect width="800" height="800" fill="#f9ead4"/>
+<circle cx="400" cy="330" r="285" fill="#84364d" opacity=".08"/>
+<circle cx="675" cy="120" r="95" fill="#c98a2a" opacity=".22"/>
+<g transform="translate(0 20) scale(.6667)"><g fill="none" stroke="#35231f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M410 565c0-175 80-285 190-285s190 110 190 285z" fill="#c98a2a" fill-opacity=".5"/><path d="M465 510c85 35 185 35 270 0"/><path d="M505 405c55 20 135 20 190 0"/></g></g>
+<text x="600" y="635" text-anchor="middle" fill="#84364d" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="700">Salgados</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
+<title id="title">Ilustração de Cajuzinho</title>
+<desc id="description">Arte editorial identificada como ilustração; não representa uma fotografia do produto.</desc>
+<rect width="1200" height="900" fill="#fff8ed"/>
+<circle cx="163" cy="143" r="250" fill="#981d3d" opacity=".08"/>
+<circle cx="1047" cy="243" r="190" fill="#e8a92f" opacity=".16"/>
+<path d="M0 800C220 690 380 850 610 770s380-70 590 30v100H0z" fill="#981d3d" opacity=".08"/>
+<rect x="64" y="58" width="1072" height="784" rx="42" fill="none" stroke="#981d3d" stroke-opacity=".18" stroke-width="4"/>
+<g transform="translate(0 -35)"><g fill="none" stroke="#3f261f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M425 535c0-126 78-205 175-205s175 79 175 205" fill="#e8a92f" fill-opacity=".5"/><path d="M405 535h390l-38 92H443z"/><path d="M490 367l-34-55M600 330v-66M710 367l34-55"/></g><path d="M505 438c-34-78 38-142 95-97 57-45 129 19 95 97-36 48-154 48-190 0" fill="#d89b36" stroke="#d89b36" stroke-width="18"/><path d="M695 408c40-12 54 20 25 39" stroke="#d89b36" stroke-width="18"/><path d="M535 383l20 13M575 368l18 16M620 370l16 18" stroke="#fff8ed" stroke-width="10" stroke-linecap="round"/></g>
+<text x="600" y="722" text-anchor="middle" fill="#981d3d" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Cajuzinho</text>
+<g transform="translate(465 808)"><rect width="270" height="42" rx="21" fill="#981d3d"/><text x="135" y="28" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ILUSTRAÇÃO</text></g>
+</svg>

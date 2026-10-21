@@ -8,8 +8,6 @@ import { createMenuInquiryUrl } from "@/lib/whatsapp";
 import { ProductPlaceholder } from "@/components/product-placeholder";
 import { ArrowIcon } from "@/components/icons";
 
-const fallbackCategoryImage = "/images/product-placeholder.svg";
-
 export function MenuSection() {
   const [activeCategory, setActiveCategory] = useState<MenuCategoryId>("bolos");
   const [searchQuery, setSearchQuery] = useState("");
@@ -73,7 +71,6 @@ export function MenuSection() {
             <div className="menu-tabs" role="tablist" aria-label="Categorias de produtos">
               {menuCategories.map((category, index) => {
                 const isActive = category.id === activeCategory;
-                const categoryImage = category.items.find((item) => item.image)?.image ?? fallbackCategoryImage;
                 return (
                   <button
                     key={category.id}
@@ -89,10 +86,7 @@ export function MenuSection() {
                     onKeyDown={(event) => handleTabKeyDown(event, index)}
                   >
                     <span className="menu-tab-image" aria-hidden="true">
-                      <Image src={categoryImage} alt="" fill sizes="96px" />
-                      {categoryImage === fallbackCategoryImage && (
-                        <span className="menu-tab-placeholder">Foto em breve</span>
-                      )}
+                      <Image src={category.image} alt="" fill sizes="96px" />
                     </span>
                     <span>{category.name}</span>
                   </button>
@@ -139,6 +133,7 @@ export function MenuSection() {
                   context="menu"
                   position={item.imagePosition}
                   fit={item.imageFit}
+                  kind={item.imageKind}
                 />
                 <div className="product-copy">
                   {item.availabilityNote && <span className="availability-badge">{item.availabilityNote}</span>}
