@@ -86,7 +86,13 @@ export function MenuSection() {
                     onKeyDown={(event) => handleTabKeyDown(event, index)}
                   >
                     <span className="menu-tab-image" aria-hidden="true">
-                      <Image src={category.image} alt="" fill sizes="96px" />
+                      <Image
+                        src={category.image}
+                        alt=""
+                        fill
+                        sizes="96px"
+                        style={{ objectFit: category.imageKind === "photo" ? "cover" : "contain" }}
+                      />
                     </span>
                     <span>{category.name}</span>
                   </button>

@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "images:optimize": "node scripts/optimize-product-images.mjs",
     "images:generate": "node --experimental-strip-types scripts/generate-menu-illustrations.mjs",
+    "images:optimize-supplied": "node scripts/optimize-supplied-product-images.mjs",
     "audit:descriptions": "node scripts/audit-menu-descriptions.mjs",
     "audit:images": "node --experimental-strip-types scripts/audit-menu-images.mjs"
   },

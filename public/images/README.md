@@ -62,3 +62,17 @@ Inventário atual:
 - 7 capas ilustradas de categoria.
 
 As ilustrações são derivadas de dados do próprio cardápio e podem ser regeneradas. Fotografias oficiais nunca são sobrescritas pelo gerador.
+
+## Fotos fornecidas pelo proprietário
+
+As imagens adicionadas pelo proprietário em `imagens de produtos /` são preservadas, com nomes normalizados por produto, em `public/images/originals/supplied-products/`. As versões exibidas no site ficam em `public/images/products/supplied-*.webp`.
+
+```bash
+npm run images:optimize-supplied
+```
+
+O script `scripts/optimize-supplied-product-images.mjs` aceita somente os pares cujo nome de arquivo identifica de forma explícita o produto. Ele converte localmente para WebP de até 1024 px, sem IA generativa e sem alterar a composição culinária da foto.
+
+Também são geradas capas fotográficas de categoria em `public/images/category-covers/` para **Bolos**, **Doces**, **Docinhos**, **Salgados**, **Sorvetes e Açaí** e **Bebidas**. Fotos de variedade são usadas exclusivamente como capas de categoria, nunca para representar um produto individual. A categoria **Tortas doces** continua usando ilustração: não foi fornecida uma foto mista cuja associação fosse segura.
+
+Fotos fornecidas que não identificam inequivocamente um item do cardápio continuam fora dos cards individuais. Isso inclui fotos de bolo com cerejas/castanhas, copo de limão com cookies e torta de limão com biscoito de chocolate; elas só podem ser usadas como capa ampla quando o contexto permite.
