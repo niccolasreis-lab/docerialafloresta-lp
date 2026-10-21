@@ -116,7 +116,7 @@ function productIconMarkup(item, categoryId, accent, dark) {
       return `<g ${stroke}><path d="M435 555h330l-30 75H465z" fill="${accent}" fill-opacity=".3"/><circle cx="600" cy="415" r="118" fill="#4c2b25"/><path d="M510 360l18 12M555 330l15 17M605 325l12 20M650 345l18 13M685 385l18 7M520 440l20-4M575 475l12-17M640 470l-13-17M685 435l-20-4" stroke="#f4dfb9" stroke-width="12" stroke-linecap="round"/></g>`;
     case "docinho-brigadeiro-de-colher":
     case "brigadeiro-de-colher":
-      return `<g ${stroke}><path d="M475 420h250l-32 180H507z" fill="${accent}" fill-opacity=".5"/><path d="M510 420c30-85 150-85 180 0" fill="${accent}" fill-opacity=".75"/><path d="M680 320l105-105M705 340l-30-30"/><circle cx="545" cy="395" r="8" fill="#fff8ed"/><circle cx="600" cy="375" r="8" fill="#fff8ed"/><circle cx="655" cy="400" r="8" fill="#fff8ed"/></g>`;
+      return `<g ${stroke}><path d="M475 420h250l-32 180H507z" fill="${accent}" fill-opacity=".5"/><path d="M510 420c30-85 150-85 180 0" fill="#4c2b25"/><path d="M535 395c42-22 88-22 130 0" stroke="#7c482e" stroke-width="13"/><path d="M680 320l105-105M705 340l-30-30"/><circle cx="545" cy="395" r="8" fill="#fff8ed"/><circle cx="600" cy="375" r="8" fill="#fff8ed"/><circle cx="655" cy="400" r="8" fill="#fff8ed"/></g>`;
     case "docinho-casadinho":
       return `<g ${stroke}><path d="M420 555h360l-35 75H455z" fill="${accent}" fill-opacity=".3"/><circle cx="542" cy="420" r="104" fill="#fff8ed"/><circle cx="658" cy="420" r="104" fill="#4c2b25"/><path d="M575 350v140" stroke="${dark}" stroke-opacity=".25" stroke-width="10"/><path d="M620 365l16 11M670 390l15 8M690 435l-17-2M645 470l-10-14" stroke="#f4dfb9" stroke-width="11" stroke-linecap="round"/></g>`;
     case "docinho-cone-de-doce-de-leite":
