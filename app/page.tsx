@@ -39,7 +39,7 @@ export default function Home() {
       <header className="site-header">
         <div className="header-inner">
           <a href="#inicio" className="brand" aria-label="Doceria La Floresta — início">
-            <Image src="/logo-lafloresta-oficial.webp" alt="" width={512} height={512} />
+            <Image src="/logo-lafloresta-oficial.webp" alt="" width={512} height={512} sizes="(max-width: 700px) 54px, 67px" />
             <small className="brand-descriptor">{business.descriptor}</small>
           </a>
           <nav className="desktop-nav" aria-label="Navegação principal">
@@ -164,7 +164,7 @@ export default function Home() {
         </div></section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-grid"><div className="footer-brand"><Image src="/logo-lafloresta-oficial.webp" alt="Logo da Doceria La Floresta" width={512} height={512} /></div><nav aria-label="Navegação do rodapé"><a href="#cardapio">Cardápio</a><a href="#encomendas">Encomendas</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav><div className="footer-social"><ExternalLink href={business.social.instagram} className="icon-link" label="Instagram da Doceria La Floresta"><InstagramIcon /></ExternalLink><ExternalLink href={whatsappUrl} className="icon-link" label="WhatsApp da Doceria La Floresta"><WhatsAppIcon /></ExternalLink></div></div><div className="container footer-bottom"><p>© {new Date().getFullYear()} Doceria La Floresta. Todos os direitos reservados.</p><p>Feito com carinho no Jaçanã.</p></div></footer>
+      <footer className="site-footer"><div className="container footer-grid"><div className="footer-brand"><Image src="/logo-lafloresta-oficial.webp" alt="Logo da Doceria La Floresta" width={512} height={512} sizes="83px" /></div><nav aria-label="Navegação do rodapé"><a href="#cardapio">Cardápio</a><a href="#encomendas">Encomendas</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav><div className="footer-social"><ExternalLink href={business.social.instagram} className="icon-link" label="Instagram da Doceria La Floresta"><InstagramIcon /></ExternalLink><ExternalLink href={whatsappUrl} className="icon-link" label="WhatsApp da Doceria La Floresta"><WhatsAppIcon /></ExternalLink></div></div><div className="container footer-bottom"><p>© {new Date().getFullYear()} Doceria La Floresta. Todos os direitos reservados.</p><p>Feito com carinho no Jaçanã.</p></div></footer>
       <ExternalLink href={whatsappUrl} className="whatsapp-float" label="Pedir pelo WhatsApp"><WhatsAppIcon /><span>Peça pelo WhatsApp</span></ExternalLink>
     </>
   );
