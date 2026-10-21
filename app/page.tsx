@@ -39,7 +39,7 @@ export default function Home() {
       <header className="site-header">
         <div className="header-inner">
           <a href="#inicio" className="brand" aria-label="Doceria La Floresta — início">
-            <Image src="/logo-placeholder.svg" alt="Logo temporário da Doceria La Floresta" width={54} height={54} />
+            <Image src="/logo.png" alt="Doceria La Floresta" width={512} height={512} />
             <span><strong>La Floresta</strong><small>{business.descriptor}</small></span>
           </a>
           <nav className="desktop-nav" aria-label="Navegação principal">
@@ -60,7 +60,7 @@ export default function Home() {
             <MotionReveal className="hero-copy">
               <p className="eyebrow">Tradição que adoça o Jaçanã</p>
               <h1>Doceria<br /><em>La Floresta</em></h1>
-              <p className="hero-text">{business.slogan}. Feitos com carinho para deixar cada encontro ainda mais especial.</p>
+              <p className="hero-text">{business.slogan}. Um cardápio completo para deixar cada encontro ainda mais especial.</p>
               <div className="button-row">
                 <ExternalLink href={whatsappUrl} className="button button-primary"><WhatsAppIcon /> Pedir pelo WhatsApp</ExternalLink>
                 <ExternalLink href={business.social.ifood} className="button button-outline">Pedir no iFood <ArrowIcon /></ExternalLink>
@@ -85,7 +85,7 @@ export default function Home() {
         </div></section>
 
         <section className="section" id="destaques"><div className="container">
-          <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Favoritos da casa</p><h2>Os mais pedidos</h2></div><p>Uma seleção dos clássicos que fazem parte da nossa história. Veja o cardápio completo logo abaixo.</p></MotionReveal>
+          <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Favoritos da casa</p><h2>Os mais pedidos</h2></div><p>Confira quatro opções em destaque e veja o cardápio completo logo abaixo.</p></MotionReveal>
           <div className="featured-grid">{featuredItems.map((item, index) => (
             <MotionReveal className="product-card" key={item.name}>
               <ProductPlaceholder
@@ -126,7 +126,7 @@ export default function Home() {
         </div></section>
 
         <section className="section gallery-section" id="galeria"><div className="container">
-          <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Direto da vitrine</p><h2>Um pouco da La Floresta</h2></div><ExternalLink href={business.social.instagram} className="button button-outline"><InstagramIcon /> Seguir @doceria.lafloresta</ExternalLink></MotionReveal>
+          <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Conheça nossos produtos</p><h2>Um pouco da La Floresta</h2></div><ExternalLink href={business.social.instagram} className="button button-outline"><InstagramIcon /> Seguir @doceria.lafloresta</ExternalLink></MotionReveal>
           <div className="gallery-grid">
             <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-1" label="Ver o Instagram da Doceria La Floresta — foto 1">
               <ProductPlaceholder image="/images/products/bolo-rigo.webp" label="Bolo Rigo" context="gallery" position="center center" />
@@ -156,7 +156,7 @@ export default function Home() {
         </div></section>
 
         <section className="section contact-section" id="contato"><div className="container contact-grid">
-          <MotionReveal className="contact-copy"><p className="eyebrow">Venha nos visitar</p><h2>Estamos no coração do Jaçanã</h2>
+          <MotionReveal className="contact-copy"><p className="eyebrow">Venha nos visitar</p><h2>Estamos no Jaçanã</h2>
             <div className="contact-list"><div><LocationIcon /><p><strong>Endereço</strong>{business.address.street}<br />{business.address.neighborhood}, {business.address.city} - {business.address.state}<br />CEP {business.address.postalCode}</p></div><div><ClockIcon /><p><strong>Horário</strong>{business.hours.summary}</p></div><div><PhoneIcon /><p><strong>Telefones</strong>{business.phones.map((phone) => <span key={phone}>{phone}</span>)}<span>WhatsApp: {business.whatsapp.display}</span></p></div></div>
             <div className="contact-actions"><ExternalLink href={whatsappUrl} className="button button-primary"><WhatsAppIcon /> WhatsApp</ExternalLink><ExternalLink href={business.social.ifood} className="button button-outline">iFood</ExternalLink><ExternalLink href={business.social.instagram} className="button button-outline"><InstagramIcon /> Instagram</ExternalLink></div>
           </MotionReveal>
@@ -164,7 +164,7 @@ export default function Home() {
         </div></section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-grid"><div className="footer-brand"><Image src="/logo-placeholder.svg" alt="Logo temporário da Doceria La Floresta" width={72} height={72} /><div><strong>La Floresta</strong><span>{business.descriptor}</span></div></div><nav aria-label="Navegação do rodapé"><a href="#cardapio">Cardápio</a><a href="#encomendas">Encomendas</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav><div className="footer-social"><ExternalLink href={business.social.instagram} className="icon-link" label="Instagram da Doceria La Floresta"><InstagramIcon /></ExternalLink><ExternalLink href={whatsappUrl} className="icon-link" label="WhatsApp da Doceria La Floresta"><WhatsAppIcon /></ExternalLink></div></div><div className="container footer-bottom"><p>© {new Date().getFullYear()} Doceria La Floresta. Todos os direitos reservados.</p><p>Feito com carinho no Jaçanã.</p></div></footer>
+      <footer className="site-footer"><div className="container footer-grid"><div className="footer-brand"><Image src="/logo.png" alt="Doceria La Floresta" width={512} height={512} /><div><strong>La Floresta</strong><span>{business.descriptor}</span></div></div><nav aria-label="Navegação do rodapé"><a href="#cardapio">Cardápio</a><a href="#encomendas">Encomendas</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav><div className="footer-social"><ExternalLink href={business.social.instagram} className="icon-link" label="Instagram da Doceria La Floresta"><InstagramIcon /></ExternalLink><ExternalLink href={whatsappUrl} className="icon-link" label="WhatsApp da Doceria La Floresta"><WhatsAppIcon /></ExternalLink></div></div><div className="container footer-bottom"><p>© {new Date().getFullYear()} Doceria La Floresta. Todos os direitos reservados.</p><p>Feito com carinho no Jaçanã.</p></div></footer>
       <ExternalLink href={whatsappUrl} className="whatsapp-float" label="Pedir pelo WhatsApp"><WhatsAppIcon /><span>Peça pelo WhatsApp</span></ExternalLink>
     </>
   );

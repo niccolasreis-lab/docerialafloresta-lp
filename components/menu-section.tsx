@@ -1,15 +1,19 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import Image from "next/image";
+import { useMemo, useRef, useState } from "react";
 import { menuCategories } from "@/data/menu";
 import type { MenuCategoryId } from "@/data/menu";
 import { createMenuInquiryUrl } from "@/lib/whatsapp";
 import { ProductPlaceholder } from "@/components/product-placeholder";
 import { ArrowIcon } from "@/components/icons";
 
+const fallbackCategoryImage = "/images/product-placeholder.svg";
+
 export function MenuSection() {
   const [activeCategory, setActiveCategory] = useState<MenuCategoryId>("bolos");
   const [searchQuery, setSearchQuery] = useState("");
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const currentCategory = menuCategories.find((category) => category.id === activeCategory) ?? menuCategories[0];
 
@@ -33,37 +37,64 @@ export function MenuSection() {
     );
   }, [currentCategory, searchQuery]);
 
+  const selectCategory = (categoryId: MenuCategoryId) => {
+    setActiveCategory(categoryId);
+    setSearchQuery("");
+  };
+
+  const handleTabKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const lastIndex = menuCategories.length - 1;
+    const nextIndex = event.key === "Home"
+      ? 0
+      : event.key === "End"
+        ? lastIndex
+        : (index + (event.key === "ArrowRight" ? 1 : -1) + menuCategories.length) % menuCategories.length;
+    const nextCategory = menuCategories[nextIndex];
+    selectCategory(nextCategory.id);
+    tabRefs.current[nextCategory.id]?.focus();
+    tabRefs.current[nextCategory.id]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+  };
+
   return (
     <section className="section menu-full-section" id="cardapio">
       <div className="container">
         <div className="section-heading split-heading">
           <div>
             <p className="eyebrow">Cardápio completo</p>
-            <h2>Explore todas as delícias</h2>
+            <h2>Explore o cardápio</h2>
           </div>
-          <p>Navegue pelas categorias ou busque pelo seu doce favorito. Clique em consultar para fazer seu pedido ou tirar dúvidas pelo WhatsApp.</p>
+          <p>Navegue pelas categorias ou busque um item. Clique em consultar para fazer seu pedido ou tirar dúvidas pelo WhatsApp.</p>
         </div>
 
         <div className="menu-controls">
           <div className="menu-tabs-wrapper">
             <div className="menu-tabs" role="tablist" aria-label="Categorias de produtos">
-              {menuCategories.map((category) => {
+              {menuCategories.map((category, index) => {
                 const isActive = category.id === activeCategory;
+                const categoryImage = category.items.find((item) => item.image)?.image ?? fallbackCategoryImage;
                 return (
                   <button
                     key={category.id}
+                    ref={(element) => { tabRefs.current[category.id] = element; }}
+                    type="button"
                     role="tab"
                     id={`tab-${category.id}`}
                     aria-controls="menu-products"
                     aria-selected={isActive}
                     tabIndex={isActive ? 0 : -1}
                     className={`menu-tab ${isActive ? "active" : ""}`}
-                    onClick={() => {
-                      setActiveCategory(category.id);
-                      setSearchQuery("");
-                    }}
+                    onClick={() => selectCategory(category.id)}
+                    onKeyDown={(event) => handleTabKeyDown(event, index)}
                   >
-                    {category.name}
+                    <span className="menu-tab-image" aria-hidden="true">
+                      <Image src={categoryImage} alt="" fill sizes="96px" />
+                      {categoryImage === fallbackCategoryImage && (
+                        <span className="menu-tab-placeholder">Foto em breve</span>
+                      )}
+                    </span>
+                    <span>{category.name}</span>
                   </button>
                 );
               })}
