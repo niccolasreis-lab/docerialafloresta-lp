@@ -29,6 +29,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .scroll-cards-heading { padding-bottom: clamp(1.75rem, 4vw, 3.5rem); }
 .scroll-cards-heading h2 { margin: 0; color: var(--cocoa); font-size: clamp(2.4rem, 5vw, 4.4rem); letter-spacing: -.05em; }
 .scroll-cards-heading > p:last-child { max-width: 38rem; margin: 1rem 0 0; color: var(--muted); }
+@media (max-width: 700px) { .scroll-cards-section { padding-bottom: 2rem; } }
 .eyebrow { margin: 0 0 .7rem; color: var(--raspberry); font-size: .74rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
 h1, h2, h3, .brand strong, .footer-brand strong { font-family: Georgia, "Times New Roman", serif; line-height: 1.05; }
 h2 { margin: 0; max-width: 16ch; font-size: clamp(2.25rem, 5vw, 4.3rem); letter-spacing: -.04em; }

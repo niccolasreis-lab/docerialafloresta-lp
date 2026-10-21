@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { menuCategories } from "@/data/menu";
 import type { MenuCategoryId } from "@/data/menu";
 import { createMenuInquiryUrl } from "@/lib/whatsapp";
@@ -14,6 +14,20 @@ export function MenuSection() {
   const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const currentCategory = menuCategories.find((category) => category.id === activeCategory) ?? menuCategories[0];
+
+  useEffect(() => {
+    const selectCategoryFromHash = () => {
+      const categoryId = window.location.hash.replace("#tab-", "") as MenuCategoryId;
+      if (menuCategories.some((category) => category.id === categoryId)) {
+        setActiveCategory(categoryId);
+        setSearchQuery("");
+      }
+    };
+
+    selectCategoryFromHash();
+    window.addEventListener("hashchange", selectCategoryFromHash);
+    return () => window.removeEventListener("hashchange", selectCategoryFromHash);
+  }, []);
 
   const filteredItems = useMemo(() => {
     const normalizedQuery = searchQuery

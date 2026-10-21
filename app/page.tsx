@@ -29,10 +29,10 @@ const featuredItems = [
 const trustItems = ["+20 anos de tradição", "Bolos, doces, salgados e sorvetes", "Aberto todos os dias", "Delivery pelo iFood"];
 
 const visualMenuHighlights: iCardItem[] = [
-  { title: "Docinhos para celebrar", description: "Brigadeiros, beijinhos e outras escolhas para tornar encontros ainda mais doces.", tag: "docinhos", src: "/images/category-covers/docinhos.webp", link: "#cardapio", color: "#3f261f", textColor: "#fffdfa" },
-  { title: "Bolos feitos para compartilhar", description: "Opções tradicionais para aniversários, comemorações e os momentos especiais do dia.", tag: "bolos", src: "/images/category-covers/bolos.webp", link: "#cardapio", color: "#3f261f", textColor: "#fffdfa" },
-  { title: "Salgados a qualquer hora", description: "Uma seleção dourada e saborosa para acompanhar uma pausa, reunião ou festa.", tag: "salgados", src: "/images/category-covers/salgados.webp", link: "#cardapio", color: "#3f261f", textColor: "#fffdfa" },
-  { title: "Açaí e sorvetes", description: "Sabores gelados para refrescar o seu dia, com opções para todos os momentos.", tag: "sorvetes", src: "/images/category-covers/sorvetes-acai.webp", link: "#cardapio", color: "#3f261f", textColor: "#fffdfa" },
+  { title: "Docinhos para celebrar", description: "Brigadeiros, beijinhos e outras escolhas para tornar encontros ainda mais doces.", tag: "Docinhos", src: "/images/category-covers/docinhos.webp", link: "#tab-docinhos", color: "#3f261f", textColor: "#fffdfa" },
+  { title: "Bolos feitos para compartilhar", description: "Opções tradicionais para aniversários, comemorações e os momentos especiais do dia.", tag: "Bolos", src: "/images/category-covers/bolos.webp", link: "#tab-bolos", color: "#3f261f", textColor: "#fffdfa" },
+  { title: "Salgados a qualquer hora", description: "Uma seleção dourada e saborosa para acompanhar uma pausa, reunião ou festa.", tag: "Salgados", src: "/images/category-covers/salgados.webp", link: "#tab-salgados", color: "#3f261f", textColor: "#fffdfa" },
+  { title: "Açaí e sorvetes", description: "Sabores gelados para refrescar o seu dia, com opções para todos os momentos.", tag: "Sorvetes e Açaí", src: "/images/category-covers/sorvetes-acai.webp", link: "#tab-sorvetes-acai", color: "#3f261f", textColor: "#fffdfa" },
 ];
 
 type ExternalLinkProps = { href: string; className: string; children: React.ReactNode; label?: string };
@@ -119,7 +119,7 @@ export default function Home() {
           <div className="container scroll-cards-heading">
             <p className="eyebrow">Escolhas da casa</p>
             <h2 id="sabores-em-destaque">Sabores para cada momento</h2>
-            <p>Deslize para conhecer algumas das categorias que fazem parte da nossa vitrine.</p>
+            <p>Conheça algumas categorias e use o botão em cada card para voltar diretamente à seleção correspondente no cardápio.</p>
           </div>
           <CardsParallax items={visualMenuHighlights} />
         </section>
