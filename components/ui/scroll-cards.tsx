@@ -34,9 +34,11 @@ const Card: FC<iCardProps> = ({ title, description, color, textColor, i, src, li
         <a
           className="mt-5 inline-flex min-h-11 items-center border border-white/60 px-4 text-sm font-bold text-white transition hover:bg-white hover:text-[#3f261f]"
           href={link}
-          aria-label={`Ver ${tag} no cardápio`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Pedir orçamento para ${title} pelo WhatsApp`}
         >
-          Ver {tag} no cardápio <span aria-hidden="true">→</span>
+          Pedir orçamento <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>

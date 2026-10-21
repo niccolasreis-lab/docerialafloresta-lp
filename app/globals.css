@@ -26,6 +26,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .container { width: min(100% - 2rem, 72rem); margin-inline: auto; }
 .section { padding: clamp(4.5rem, 9vw, 8rem) 0; }
 .scroll-cards-section { padding-top: clamp(4.5rem, 9vw, 8rem); background: var(--cream-deep); }
+.order-highlights-section { color: var(--white); background: var(--raspberry); }
+.order-highlights-section .scroll-cards-heading h2 { color: var(--white); }
+.order-highlights-section .scroll-cards-heading > p:last-child { color: rgba(255,255,255,.8); }
+.order-highlights-section .eyebrow { color: #ffcf77; }
 .scroll-cards-heading { padding-bottom: clamp(1.75rem, 4vw, 3.5rem); }
 .scroll-cards-heading h2 { margin: 0; color: var(--cocoa); font-size: clamp(2.4rem, 5vw, 4.4rem); letter-spacing: -.05em; }
 .scroll-cards-heading > p:last-child { max-width: 38rem; margin: 1rem 0 0; color: var(--muted); }

@@ -28,11 +28,10 @@ const featuredItems = [
 
 const trustItems = ["+20 anos de tradição", "Bolos, doces, salgados e sorvetes", "Aberto todos os dias", "Delivery pelo iFood"];
 
-const visualMenuHighlights: iCardItem[] = [
-  { title: "Docinhos para celebrar", description: "Brigadeiros, beijinhos e outras escolhas para tornar encontros ainda mais doces.", tag: "Docinhos", src: "/images/category-covers/docinhos.webp", link: "#tab-docinhos", color: "#3f261f", textColor: "#fffdfa" },
-  { title: "Bolos feitos para compartilhar", description: "Opções tradicionais para aniversários, comemorações e os momentos especiais do dia.", tag: "Bolos", src: "/images/category-covers/bolos.webp", link: "#tab-bolos", color: "#3f261f", textColor: "#fffdfa" },
-  { title: "Salgados a qualquer hora", description: "Uma seleção dourada e saborosa para acompanhar uma pausa, reunião ou festa.", tag: "Salgados", src: "/images/category-covers/salgados.webp", link: "#tab-salgados", color: "#3f261f", textColor: "#fffdfa" },
-  { title: "Açaí e sorvetes", description: "Sabores gelados para refrescar o seu dia, com opções para todos os momentos.", tag: "Sorvetes e Açaí", src: "/images/category-covers/sorvetes-acai.webp", link: "#tab-sorvetes-acai", color: "#3f261f", textColor: "#fffdfa" },
+const orderHighlights: iCardItem[] = [
+  { title: "Bolos inteiros", description: "Bolos feitos para aniversários, encontros e celebrações, com tamanho aproximado para 12 pessoas.", tag: "Encomendas", src: "/images/products/bolo-de-nozes.webp", link: createWhatsAppUrl("Olá! Gostaria de pedir um orçamento para bolo inteiro."), color: "#981d3d", textColor: "#fffdfa" },
+  { title: "Mini salgados", description: "Porções com 30 unidades para servir com praticidade em reuniões, festas e eventos.", tag: "Encomendas", src: "/images/category-covers/salgados.webp", link: createWhatsAppUrl("Olá! Gostaria de pedir um orçamento para mini salgados."), color: "#981d3d", textColor: "#fffdfa" },
+  { title: "Tortas inteiras", description: "Opções para compartilhar, disponíveis em tamanhos de aproximadamente 8 ou 12 fatias.", tag: "Encomendas", src: "/images/products/supplied-torta-de-morango.webp", link: createWhatsAppUrl("Olá! Gostaria de pedir um orçamento para torta inteira."), color: "#981d3d", textColor: "#fffdfa" },
 ];
 
 type ExternalLinkProps = { href: string; className: string; children: React.ReactNode; label?: string };
@@ -115,15 +114,6 @@ export default function Home() {
 
         <MenuSection />
 
-        <section className="scroll-cards-section" aria-labelledby="sabores-em-destaque">
-          <div className="container scroll-cards-heading">
-            <p className="eyebrow">Escolhas da casa</p>
-            <h2 id="sabores-em-destaque">Sabores para cada momento</h2>
-            <p>Conheça algumas categorias e use o botão em cada card para voltar diretamente à seleção correspondente no cardápio.</p>
-          </div>
-          <CardsParallax items={visualMenuHighlights} />
-        </section>
-
         <section className="section order-section" id="encomendas"><div className="container order-grid">
           <MotionReveal className="order-visual"><ProductPlaceholder image="/images/products/bolo-de-nozes.webp" label="Bolo de Nozes para encomendas" context="order" position="center 45%" /></MotionReveal>
           <MotionReveal className="order-copy"><p className="eyebrow light">Celebre com a gente</p><h2>Encomendas para momentos especiais</h2><p>Para aniversários, encontros e eventos, preparamos opções tradicionais sob consulta.</p>
@@ -131,6 +121,15 @@ export default function Home() {
             <ExternalLink href={quoteUrl} className="button button-cream"><WhatsAppIcon /> Pedir orçamento</ExternalLink>
           </MotionReveal>
         </div></section>
+
+        <section className="scroll-cards-section order-highlights-section" aria-labelledby="opcoes-para-encomenda">
+          <div className="container scroll-cards-heading">
+            <p className="eyebrow">Encomendas</p>
+            <h2 id="opcoes-para-encomenda">Escolha o que combina com a sua celebração</h2>
+            <p>Conheça as opções de encomenda e fale com a nossa equipe para confirmar sabores, disponibilidade e detalhes do pedido.</p>
+          </div>
+          <CardsParallax items={orderHighlights} />
+        </section>
 
         <section className="section about-section" id="sobre"><div className="container about-grid">
           <MotionReveal className="about-mark"><span>Desde</span><strong>+20</strong><span>anos</span></MotionReveal>
