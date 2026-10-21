@@ -6,7 +6,7 @@
 <circle cx="1064" cy="226" r="190" fill="#d89b36" opacity=".16"/>
 <path d="M0 800C220 690 380 850 610 770s380-70 590 30v100H0z" fill="#713247" opacity=".08"/>
 <rect x="64" y="58" width="1072" height="784" rx="42" fill="none" stroke="#713247" stroke-opacity=".18" stroke-width="4"/>
-<g transform="translate(0 -35)"><g fill="none" stroke="#422a24" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M425 535c0-126 78-205 175-205s175 79 175 205" fill="#d89b36" fill-opacity=".5"/><path d="M405 535h390l-38 92H443z"/><path d="M490 367l-34-55M600 330v-66M710 367l34-55"/></g><path d="M485 425c28-74 102-74 115 0" stroke="#fff8ed" stroke-width="32"/><path d="M600 425c13-74 87-74 115 0" stroke="#422a24" stroke-width="32"/></g>
+<g transform="translate(0 -35)"><g fill="none" stroke="#422a24" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M420 555h360l-35 75H455z" fill="#d89b36" fill-opacity=".3"/><circle cx="542" cy="420" r="104" fill="#fff8ed"/><circle cx="658" cy="420" r="104" fill="#4c2b25"/><path d="M575 350v140" stroke="#422a24" stroke-opacity=".25" stroke-width="10"/><path d="M620 365l16 11M670 390l15 8M690 435l-17-2M645 470l-10-14" stroke="#f4dfb9" stroke-width="11" stroke-linecap="round"/></g></g>
 <text x="600" y="722" text-anchor="middle" fill="#713247" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Casadinho</text>
 <g transform="translate(465 808)"><rect width="270" height="42" rx="21" fill="#713247"/><text x="135" y="28" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ILUSTRAÇÃO</text></g>
 </svg>

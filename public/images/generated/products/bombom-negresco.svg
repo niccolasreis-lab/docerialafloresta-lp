@@ -6,7 +6,7 @@
 <circle cx="1079" cy="211" r="190" fill="#efbe5d" opacity=".16"/>
 <path d="M0 800C220 690 380 850 610 770s380-70 590 30v100H0z" fill="#a92f52" opacity=".08"/>
 <rect x="64" y="58" width="1072" height="784" rx="42" fill="none" stroke="#a92f52" stroke-opacity=".18" stroke-width="4"/>
-<g transform="translate(0 -35)"><g fill="none" stroke="#4a2923" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M425 535c0-126 78-205 175-205s175 79 175 205" fill="#efbe5d" fill-opacity=".5"/><path d="M405 535h390l-38 92H443z"/><path d="M490 367l-34-55M600 330v-66M710 367l34-55"/></g><circle cx="520" cy="390" r="9" fill="#efbe5d"/><circle cx="600" cy="355" r="9" fill="#efbe5d"/><circle cx="680" cy="400" r="9" fill="#efbe5d"/></g>
+<g transform="translate(0 -35)"><g fill="none" stroke="#4a2923" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M435 555h330l-30 75H465z" fill="#efbe5d" fill-opacity=".3"/><circle cx="600" cy="415" r="118" fill="#332a2b"/><circle cx="600" cy="415" r="62" fill="#fff8ed"/><path d="M600 353v124M538 415h124" stroke="#332a2b" stroke-width="16"/><circle cx="600" cy="415" r="17" fill="#332a2b"/></g></g>
 <text x="600" y="722" text-anchor="middle" fill="#a92f52" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Bombom Negresco</text>
 <g transform="translate(465 808)"><rect width="270" height="42" rx="21" fill="#a92f52"/><text x="135" y="28" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ILUSTRAÇÃO</text></g>
 </svg>

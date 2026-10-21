@@ -6,7 +6,7 @@
 <circle cx="1005" cy="285" r="190" fill="#e8a92f" opacity=".16"/>
 <path d="M0 800C220 690 380 850 610 770s380-70 590 30v100H0z" fill="#981d3d" opacity=".08"/>
 <rect x="64" y="58" width="1072" height="784" rx="42" fill="none" stroke="#981d3d" stroke-opacity=".18" stroke-width="4"/>
-<g transform="translate(0 -35)"><g fill="none" stroke="#3f261f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M425 535c0-126 78-205 175-205s175 79 175 205" fill="#e8a92f" fill-opacity=".5"/><path d="M405 535h390l-38 92H443z"/><path d="M490 367l-34-55M600 330v-66M710 367l34-55"/></g><circle cx="520" cy="390" r="9" fill="#e8a92f"/><circle cx="600" cy="355" r="9" fill="#e8a92f"/><circle cx="680" cy="400" r="9" fill="#e8a92f"/></g>
+<g transform="translate(0 -35)"><g fill="none" stroke="#3f261f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"><path d="M435 555h330l-30 75H465z" fill="#e8a92f" fill-opacity=".3"/><circle cx="600" cy="415" r="118" fill="#df6f91"/><path d="M510 365l18 12M550 335l15 17M600 325v20M650 345l18 13M685 385l18 7M520 440l20-4M575 475l12-17M640 470l-13-17M685 435l-20-4" stroke="#fff1f2" stroke-width="12" stroke-linecap="round"/></g></g>
 <text x="600" y="722" text-anchor="middle" fill="#981d3d" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">Bicho de Pé</text>
 <g transform="translate(465 808)"><rect width="270" height="42" rx="21" fill="#981d3d"/><text x="135" y="28" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">ILUSTRAÇÃO</text></g>
 </svg>

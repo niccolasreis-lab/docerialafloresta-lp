@@ -86,8 +86,9 @@ function iconMarkup(categoryId, accent, dark) {
   }
 }
 
-function productKind(name, categoryId) {
-  const value = name.toLowerCase();
+function productKind(item, categoryId) {
+  const value = item.name.toLowerCase();
+  if (categoryId === "docinhos") return `docinho-${item.slug}`;
   if (/brigadeiro de colher/.test(value)) return "brigadeiro-de-colher";
   if (/brigadeiro|bicho de pé|cajuzinho|beijinho|casadinho|camafeu|bombom|nega maluca|olho de sogra/.test(value)) return "docinho";
   if (/cone|canudo|pirulito|espeto/.test(value)) return "confeitado";
@@ -105,12 +106,39 @@ function productKind(name, categoryId) {
 function productIconMarkup(item, categoryId, accent, dark) {
   const stroke = `fill="none" stroke="${dark}" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"`;
   const value = item.name.toLowerCase();
-  const kind = productKind(item.name, categoryId);
+  const kind = productKind(item, categoryId);
   const sprinkle = `<circle cx="520" cy="390" r="9" fill="${accent}"/><circle cx="600" cy="355" r="9" fill="${accent}"/><circle cx="680" cy="400" r="9" fill="${accent}"/>`;
 
   switch (kind) {
+    case "docinho-beijinho":
+      return `<g ${stroke}><path d="M430 555h340l-34 75H464z" fill="${accent}" fill-opacity=".35"/><circle cx="600" cy="420" r="112" fill="#fff8ed"/><path d="M525 390l28 18M558 350l23 24M600 340v32M642 350l-23 24M675 390l-28 18M540 450l25-10M660 450l-25-10" stroke="#d8b078" stroke-width="13" stroke-linecap="round"/><path d="M600 320v-42M600 278l-25-25M600 278l25-25" stroke="#5c5535" stroke-width="13" stroke-linecap="round"/></g>`;
+    case "docinho-brigadeiro":
+      return `<g ${stroke}><path d="M435 555h330l-30 75H465z" fill="${accent}" fill-opacity=".3"/><circle cx="600" cy="415" r="118" fill="#4c2b25"/><path d="M510 360l18 12M555 330l15 17M605 325l12 20M650 345l18 13M685 385l18 7M520 440l20-4M575 475l12-17M640 470l-13-17M685 435l-20-4" stroke="#f4dfb9" stroke-width="12" stroke-linecap="round"/></g>`;
+    case "docinho-brigadeiro-de-colher":
     case "brigadeiro-de-colher":
       return `<g ${stroke}><path d="M475 420h250l-32 180H507z" fill="${accent}" fill-opacity=".5"/><path d="M510 420c30-85 150-85 180 0" fill="${accent}" fill-opacity=".75"/><path d="M680 320l105-105M705 340l-30-30"/><circle cx="545" cy="395" r="8" fill="#fff8ed"/><circle cx="600" cy="375" r="8" fill="#fff8ed"/><circle cx="655" cy="400" r="8" fill="#fff8ed"/></g>`;
+    case "docinho-casadinho":
+      return `<g ${stroke}><path d="M420 555h360l-35 75H455z" fill="${accent}" fill-opacity=".3"/><circle cx="542" cy="420" r="104" fill="#fff8ed"/><circle cx="658" cy="420" r="104" fill="#4c2b25"/><path d="M575 350v140" stroke="${dark}" stroke-opacity=".25" stroke-width="10"/><path d="M620 365l16 11M670 390l15 8M690 435l-17-2M645 470l-10-14" stroke="#f4dfb9" stroke-width="11" stroke-linecap="round"/></g>`;
+    case "docinho-cone-de-doce-de-leite":
+      return `<g ${stroke}><path d="M490 350h220l-52 250H542z" fill="#d5a152"/><path d="M505 385l190 160M695 385L505 545M520 450h160" stroke="#9d6a2d" stroke-width="12"/><path d="M490 350c0-92 220-92 220 0" fill="#a95e28"/><path d="M530 325c38-35 102-35 140 0" stroke="#f3c77c" stroke-width="22"/></g>`;
+    case "docinho-camafeu-de-nozes":
+      return `<g ${stroke}><path d="M430 555h340l-35 75H465z" fill="${accent}" fill-opacity=".3"/><ellipse cx="600" cy="420" rx="135" ry="92" fill="#f4e0bb"/><path d="M515 420c25-76 65-76 85 0 20-76 60-76 85 0" fill="#8a5a35"/><path d="M540 395c20-22 40-22 60 0 20-22 40-22 60 0" stroke="#c28a50" stroke-width="14"/></g>`;
+    case "docinho-cajuzinho":
+      return `<g ${stroke}><path d="M430 555h340l-35 75H465z" fill="${accent}" fill-opacity=".3"/><path d="M495 445c-38-95 70-162 130-106 60-56 168 11 130 106-35 77-225 77-260 0" fill="#9a6337"/><ellipse cx="718" cy="442" rx="31" ry="22" fill="#e6c791" transform="rotate(-25 718 442)"/><path d="M525 400l20 15M565 372l18 20M610 362l14 22M655 375l18 18M695 410l20 12" stroke="#e6c791" stroke-width="10" stroke-linecap="round"/></g>`;
+    case "docinho-olho-de-sogra":
+      return `<g ${stroke}><path d="M430 555h340l-35 75H465z" fill="${accent}" fill-opacity=".3"/><path d="M475 430c0-112 108-146 125-42 17-104 125-70 125 42-36 102-214 102-250 0" fill="#452d31"/><path d="M548 360c15 48 15 88 0 130M652 360c-15 48-15 88 0 130" stroke="#301d20" stroke-width="14"/><path d="M555 420c30-58 60-58 90 0-30 58-60 58-90 0" fill="#fff8ed"/><path d="M570 405l16 10M600 390v20M630 405l-16 10" stroke="#d8b078" stroke-width="9" stroke-linecap="round"/></g>`;
+    case "docinho-bicho-de-pe":
+      return `<g ${stroke}><path d="M435 555h330l-30 75H465z" fill="${accent}" fill-opacity=".3"/><circle cx="600" cy="415" r="118" fill="#df6f91"/><path d="M510 365l18 12M550 335l15 17M600 325v20M650 345l18 13M685 385l18 7M520 440l20-4M575 475l12-17M640 470l-13-17M685 435l-20-4" stroke="#fff1f2" stroke-width="12" stroke-linecap="round"/></g>`;
+    case "docinho-nega-maluca-pequena":
+      return `<g ${stroke}><path d="M435 555h330l-30 75H465z" fill="${accent}" fill-opacity=".3"/><rect x="485" y="330" width="230" height="180" rx="20" fill="#4c2b25"/><path d="M485 380h230" stroke="#7c482e" stroke-width="38"/><path d="M520 360l14 12M565 345l13 14M610 350l12 13M655 345l13 14" stroke="#f4dfb9" stroke-width="10" stroke-linecap="round"/></g>`;
+    case "docinho-bombom-negresco":
+      return `<g ${stroke}><path d="M435 555h330l-30 75H465z" fill="${accent}" fill-opacity=".3"/><circle cx="600" cy="415" r="118" fill="#332a2b"/><circle cx="600" cy="415" r="62" fill="#fff8ed"/><path d="M600 353v124M538 415h124" stroke="#332a2b" stroke-width="16"/><circle cx="600" cy="415" r="17" fill="#332a2b"/></g>`;
+    case "docinho-bombom-de-prestigio":
+      return `<g ${stroke}><path d="M435 555h330l-30 75H465z" fill="${accent}" fill-opacity=".3"/><path d="M480 425c0-125 240-125 240 0-25 115-215 115-240 0" fill="#4c2b25"/><path d="M535 398c36-47 94-47 130 0-36 62-94 62-130 0" fill="#fff8ed"/><path d="M550 390l16 12M585 375l15 14M625 375l15 14M660 390l-16 12" stroke="#d8b078" stroke-width="10" stroke-linecap="round"/></g>`;
+    case "docinho-bombom-de-brigadeiro":
+      return `<g ${stroke}><path d="M445 555h310l-30 72H475z" fill="${accent}" fill-opacity=".32"/><path d="M520 470l-50-95 58-72h144l58 72-50 95z" fill="#4c2b25"/><path d="M525 365l18 10M560 340l16 13M605 335l13 16M650 350l17 12M683 390l18 6M550 425l20-4M610 445l12-16M670 425l-18-5" stroke="#f4dfb9" stroke-width="11" stroke-linecap="round"/></g>`;
+    case "docinho-dan-top":
+      return `<g ${stroke}><path d="M435 555h330l-30 75H465z" fill="${accent}" fill-opacity=".3"/><path d="M495 500V330h210v170" fill="#fff8ed"/><path d="M495 330c0-75 210-75 210 0" fill="${accent}" fill-opacity=".55"/><path d="M530 425h140M600 330v-70"/></g>`;
     case "docinho": {
       const topping = value.includes("beijinho")
         ? `<path d="M510 390l20 13M555 365l18 16M610 360l17 18M660 385l20 12M695 425l20 6" stroke="#fff8ed" stroke-width="12" stroke-linecap="round"/><path d="M600 348v-38" stroke="#617348" stroke-width="12"/><path d="M600 310l-22-23M600 310l22-23" stroke="#617348" stroke-width="10"/>`

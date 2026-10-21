@@ -1,4 +1,5 @@
 import { access, readdir, readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import sharp from "sharp";
 import { menuCategories } from "../data/menu.ts";
@@ -64,6 +65,16 @@ for (const file of generatedFiles) {
 }
 for (const expected of expectedGeneratedNames) {
   if (!generatedFiles.includes(expected)) failures.push(`Ilustração não gerada: ${expected}`);
+}
+
+const generatedHashes = new Map();
+for (const file of generatedFiles) {
+  const hash = createHash("sha256")
+    .update(await readFile(path.join(generatedProductDirectory, file)))
+    .digest("hex");
+  const existing = generatedHashes.get(hash);
+  if (existing) failures.push(`Ilustrações provisórias reutilizadas: ${existing} e ${file}`);
+  generatedHashes.set(hash, file);
 }
 
 const counts = {
