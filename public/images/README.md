@@ -57,9 +57,9 @@ Inventário atual:
 
 - 142 entradas distribuídas entre 7 categorias;
 - 128 produtos únicos (14 entradas são repetições entre categorias);
-- 13 produtos únicos com fotografia oficial;
-- 115 produtos únicos com ilustração gerada;
-- 7 capas ilustradas de categoria.
+- 46 produtos únicos com fotografia (12 da fonte oficial anterior e 34 fornecidas pelo proprietário);
+- 82 produtos únicos com ilustração gerada;
+- 6 capas fotográficas de categoria e 1 capa ilustrada (Tortas doces).
 
 As ilustrações são derivadas de dados do próprio cardápio e podem ser regeneradas. Fotografias oficiais nunca são sobrescritas pelo gerador.
 
