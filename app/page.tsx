@@ -39,7 +39,7 @@ export default function Home() {
       <header className="site-header">
         <div className="header-inner">
           <a href="#inicio" className="brand" aria-label="Doceria La Floresta — início">
-            <Image src="/logo-lafloresta-oficial.webp" alt="" width={512} height={512} priority />
+            <Image src="/logo-lafloresta-oficial.webp" alt="" width={512} height={512} />
             <small className="brand-descriptor">{business.descriptor}</small>
           </a>
           <nav className="desktop-nav" aria-label="Navegação principal">
