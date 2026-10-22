@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/products/bolo-floresta-negra.webp",
-        width: 512,
-        height: 384,
+        url: "/images/generated/refresh/bolo-floresta-negra-v2.webp",
+        width: 1024,
+        height: 1024,
         alt: "Bolo Floresta Negra da Doceria La Floresta",
       },
     ],
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: seoTitle,
     description: seoDescription,
-    images: ["/images/products/bolo-floresta-negra.webp"],
+    images: ["/images/generated/refresh/bolo-floresta-negra-v2.webp"],
   },
   robots: {
     index: true,
@@ -57,7 +57,7 @@ const jsonLd = {
   "@type": ["Bakery", "LocalBusiness"],
   name: business.name,
   description: business.slogan,
-  image: new URL("/images/products/bolo-floresta-negra.webp", siteUrl).toString(),
+  image: new URL("/images/generated/refresh/bolo-floresta-negra-v2.webp", siteUrl).toString(),
   address: {
     "@type": "PostalAddress",
     streetAddress: business.address.street,

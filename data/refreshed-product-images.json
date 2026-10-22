@@ -1,0 +1,74 @@
+{
+  "bolo-floresta-negra": {
+    "name": "Bolo Floresta Negra",
+    "image": "/images/generated/refresh/bolo-floresta-negra-v2.webp",
+    "original": "/images/products/bolo-floresta-negra.webp",
+    "sourceSha256": "f727ef5d1b1355c27a0e8fc606c49a605e4dcdffb9ddf6860d26aef51d635428"
+  },
+  "bolo-de-nozes": {
+    "name": "Bolo de Nozes",
+    "image": "/images/generated/refresh/bolo-de-nozes-v2.webp",
+    "original": "/images/products/bolo-de-nozes.webp",
+    "sourceSha256": "3a7f38f09127f59f487e4b97b6ef7b5e09956be26f999fc687554cf1a737f6c3"
+  },
+  "bolo-de-brigadeiro": {
+    "name": "Bolo de Brigadeiro",
+    "image": "/images/generated/refresh/bolo-de-brigadeiro-v2.webp",
+    "original": "/images/products/bolo-de-brigadeiro.webp",
+    "sourceSha256": "af47048d8486e94745390891a4658d7edc68104bb442fa2bcc08aa8e84250126"
+  },
+  "bolo-de-leite-ninho": {
+    "name": "Bolo de Leite Ninho",
+    "image": "/images/generated/refresh/bolo-de-leite-ninho-v2.webp",
+    "original": "/images/products/bolo-de-leite-ninho.webp",
+    "sourceSha256": "ce1c01d8b6c29117d779a172d36f29c60cd6b8ec3913846d542fae4ad9a36aca"
+  },
+  "bolo-rigo": {
+    "name": "Bolo Rigo",
+    "image": "/images/generated/refresh/bolo-rigo-v2.webp",
+    "original": "/images/products/bolo-rigo.webp",
+    "sourceSha256": "4b98bddf5681f60abedca9373fc8629e4cce8899dbc0d3d9e18ba8509ab1d6d3"
+  },
+  "bolo-de-doce-de-leite-com-morango": {
+    "name": "Bolo de Doce de Leite com Morango",
+    "image": "/images/generated/refresh/bolo-de-doce-de-leite-com-morango-v2.webp",
+    "original": "/images/products/bolo-de-doce-de-leite-com-morango.webp",
+    "sourceSha256": "2b78009c3615e3a6e7709f2726813066a3fb2c5a693262c7024a6f54833fbfc4"
+  },
+  "bolo-de-abacaxi": {
+    "name": "Bolo de Abacaxi",
+    "image": "/images/generated/refresh/bolo-de-abacaxi-v2.webp",
+    "original": "/images/products/bolo-de-abacaxi.webp",
+    "sourceSha256": "9639124aab4e26155eea65944de4f946960710f6fa07aa32c442d5770d8befc4"
+  },
+  "bolo-mil-folhas": {
+    "name": "Bolo Mil Folhas",
+    "image": "/images/generated/refresh/bolo-mil-folhas-v2.webp",
+    "original": "/images/products/bolo-mil-folhas.webp",
+    "sourceSha256": "b95447ad83a527784277846672948039eebf2b2045238af61969a72f436c23c5"
+  },
+  "bolo-trufado": {
+    "name": "Bolo Trufado",
+    "image": "/images/generated/refresh/bolo-trufado-v2.webp",
+    "original": "/images/products/bolo-trufado.webp",
+    "sourceSha256": "8fb12ebf3527240b3dfc1cdb6670b435ed48b4975d985894aa6e1a30ba3f8d4a"
+  },
+  "bolo-de-kit-kat-com-morango": {
+    "name": "Bolo de Kit-Kat com Morango",
+    "image": "/images/generated/refresh/bolo-de-kit-kat-com-morango-v2.webp",
+    "original": "/images/products/bolo-de-kit-kat-com-morango.webp",
+    "sourceSha256": "8b2366a0f53e8dde7a9a637653474fd55b6abf1579a41d9e8d895b9ab156c629"
+  },
+  "bolo-de-morango-com-cobertura-de-chantilly": {
+    "name": "Bolo de Morango com Cobertura de Chantilly",
+    "image": "/images/generated/refresh/bolo-de-morango-com-cobertura-de-chantilly-v2.webp",
+    "original": "/images/products/bolo-de-morango-com-cobertura-de-chantilly.webp",
+    "sourceSha256": "2b65e6e05cde0b24c4e447a0c1125dd5c1cdda9a5c7919e0f8b10838ced17076"
+  },
+  "cheesecake-de-amora": {
+    "name": "Cheesecake de Amora",
+    "image": "/images/generated/refresh/cheesecake-de-amora-v2.webp",
+    "original": "/images/products/cheesecake-de-amora.webp",
+    "sourceSha256": "5626f860c17028f26f6f2fccd2e775d16f9b0122d72193f5dd45d32ad5815887"
+  }
+}

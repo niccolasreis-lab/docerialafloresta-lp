@@ -1,3 +1,4 @@
+import refreshedProductImages from "./refreshed-product-images.json" with { type: "json" };
 import generatedProductImages from "./generated-product-images.json" with { type: "json" };
 
 export type MenuCategoryId =
@@ -117,16 +118,17 @@ const item = (
 ): MenuItem => {
   const slug = slugify(name);
   const imageMetadata = productImages[slug];
+  const refreshedImage = (refreshedProductImages as Readonly<Record<string, { image: string }>>)[slug]?.image;
   const generatedImage = (generatedProductImages as Readonly<Record<string, string>>)[slug];
 
   return {
     slug,
     name,
     description,
-    image: imageMetadata?.image ?? generatedImage ?? `/images/generated/products/${slug}.svg`,
-    imageKind: imageMetadata ? "photo" : generatedImage ? "generated" : "illustration",
+    image: refreshedImage ?? imageMetadata?.image ?? generatedImage ?? `/images/generated/products/${slug}.svg`,
+    imageKind: refreshedImage ? "generated" : imageMetadata ? "photo" : generatedImage ? "generated" : "illustration",
     ...(imageMetadata?.imagePosition ? { imagePosition: imageMetadata.imagePosition } : {}),
-    ...(imageMetadata?.imageFit ? { imageFit: imageMetadata.imageFit } : generatedImage ? { imageFit: "contain" as const } : {}),
+    ...(refreshedImage ? { imageFit: "contain" as const } : imageMetadata?.imageFit ? { imageFit: imageMetadata.imageFit } : generatedImage ? { imageFit: "contain" as const } : {}),
     ...(availabilityNote ? { availabilityNote } : {}),
   };
 };
