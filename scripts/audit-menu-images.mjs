@@ -45,7 +45,7 @@ for (const image of referencedPaths) {
 for (const item of uniqueProducts.values()) {
   const expectedPrefix = item.imageKind === "photo"
     ? "/images/products/"
-    : "/images/generated/products/";
+    : "/images/generated/";
   const expectedExtension = item.imageKind === "illustration" ? ".svg" : ".webp";
   if (!item.image.startsWith(expectedPrefix) || !item.image.endsWith(expectedExtension)) {
     failures.push(`Tipo e arquivo incompatíveis em ${item.slug}: ${item.imageKind} -> ${item.image}`);
@@ -82,7 +82,7 @@ for (const file of generatedFiles) {
 }
 
 const cropManifest = JSON.parse(await readFile("scripts/product-crops.json", "utf8"));
-const generatedItems = [...uniqueProducts.values()].filter((item) => item.imageKind === "generated");
+const generatedItems = [...uniqueProducts.values()].filter((item) => item.imageKind === "generated" && item.image.startsWith("/images/generated/products/"));
 if (cropManifest.length !== 82 || generatedItems.length !== 82) failures.push("Esperados 82 produtos recortados individualmente.");
 const rasterHashes = new Set();
 for (const crop of cropManifest) {
@@ -97,6 +97,16 @@ for (const crop of cropManifest) {
   rasterHashes.add(hash);
   const metadata = await sharp(bytes).metadata();
   if (metadata.width !== crop.crop.width || metadata.height !== crop.crop.height) failures.push(`Dimensões do recorte divergentes: ${crop.name}`);
+}
+
+const refreshed = JSON.parse(await readFile("data/refreshed-product-images.json", "utf8"));
+if (Object.keys(refreshed).length !== 12) failures.push("Esperadas 12 imagens antigas renovadas.");
+for (const [slug, replacement] of Object.entries(refreshed)) {
+  const item = uniqueProducts.get(slug);
+  if (!item || item.name !== replacement.name || item.image !== replacement.image || item.imageKind !== "generated" || item.imageFit !== "contain") failures.push(`Substituição incorreta: ${slug}`);
+  await access(path.join(publicDirectory, replacement.original));
+  const metadata = await sharp(path.join(publicDirectory, replacement.image)).metadata();
+  if (metadata.width !== 1024 || metadata.height !== 1024) failures.push(`Nova imagem sem resolução esperada: ${slug}`);
 }
 
 const counts = {

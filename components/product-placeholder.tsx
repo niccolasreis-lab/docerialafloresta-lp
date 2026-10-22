@@ -19,7 +19,7 @@ export function ProductPlaceholder({
   lcp = false,
   position = "center center",
   fit = "cover",
-  kind = "photo",
+  kind = image?.startsWith("/images/generated/") ? "generated" : "photo",
 }: {
   image?: string | null;
   label: string;
@@ -29,14 +29,15 @@ export function ProductPlaceholder({
   fit?: ProductImageFit;
   kind?: ProductImageKind;
 }) {
+  const resolvedFit = kind === "generated" ? "contain" : fit;
   const imageStyle: CSSProperties = {
-    objectFit: fit,
+    objectFit: resolvedFit,
     objectPosition: position,
   };
 
   if (image) {
     return (
-      <div className={`product-placeholder product-image-${fit} product-image-${kind}`}>
+      <div className={`product-placeholder product-image-${resolvedFit} product-image-${kind}`}>
         <Image
           src={image}
           alt={kind === "photo" ? `Foto de ${label}` : kind === "generated" ? label : `Ilustração de ${label}`}
