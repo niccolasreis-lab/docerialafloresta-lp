@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/generated/refresh/bolo-floresta-negra-v2.webp",
-        width: 512,
-        height: 384,
+        width: 1024,
+        height: 1024,
         alt: "Bolo Floresta Negra da Doceria La Floresta",
       },
     ],
