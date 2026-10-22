@@ -2,9 +2,10 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import type { ProductImageFit, ProductImageKind, ProductImagePosition } from "@/data/menu";
 
-export type ProductImageContext = "hero" | "featured" | "menu" | "order" | "gallery";
+export type ProductImageContext = "hero" | "featured" | "menu" | "order" | "gallery" | "detail";
 
 const imageSizes: Record<ProductImageContext, string> = {
+  detail: "(max-width: 700px) 92vw, 480px",
   hero: "(max-width: 700px) 81vw, (max-width: 1280px) 43vw, 520px",
   featured: "(max-width: 700px) calc((100vw - 2.5rem) / 2), (max-width: 980px) calc((100vw - 3rem) / 2), (max-width: 1184px) calc((100vw - 5rem) / 4), 276px",
   menu: "(max-width: 700px) calc((100vw - 2.5rem) / 2), (max-width: 980px) calc((100vw - 3rem) / 2), (max-width: 1184px) calc((100vw - 5rem) / 4), 276px",

@@ -1,0 +1,6 @@
+import sharp from "sharp";
+
+const background = Buffer.from(`<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="630" fill="#fff8ed"/><rect y="605" width="1200" height="25" fill="#981d3d"/><text x="70" y="245" fill="#981d3d" font-family="serif" font-size="70">La Floresta</text><text x="73" y="300" fill="#3f261f" font-family="sans-serif" font-size="27">Bolos, doces e salgados</text><text x="73" y="355" fill="#765e55" font-family="sans-serif" font-size="24">Mais de 20 anos de tradição no Jaçanã</text><text x="73" y="485" fill="#981d3d" font-family="sans-serif" font-size="25">Escolha seu próximo favorito.</text><text x="73" y="530" fill="#765e55" font-family="sans-serif" font-size="21">Pedidos pelo WhatsApp e iFood</text></svg>`);
+const photo = await sharp("public/images/products/bolo-floresta-negra.webp").resize(470, 545, { fit: "cover" }).toBuffer();
+const logo = await sharp("public/logo-lafloresta-oficial.webp").resize(104, 104, { fit: "contain" }).png().toBuffer();
+await sharp(background).composite([{ input: photo, left: 675, top: 30 }, { input: logo, left: 73, top: 50 }]).jpeg({ quality: 90 }).toFile("public/social-preview.jpg");

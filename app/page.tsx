@@ -8,10 +8,10 @@ import { MobileNavigation } from "@/components/mobile-navigation";
 import { MotionReveal } from "@/components/motion-reveal";
 import { ProductPlaceholder } from "@/components/product-placeholder";
 import { MenuSection } from "@/components/menu-section";
-import { CardsParallax, type iCardItem } from "@/components/ui/scroll-cards";
+import { ProductDetails } from "@/components/product-details";
+import { OrderBuilder } from "@/components/order-builder";
 
 const whatsappUrl = createWhatsAppUrl("Olá! Gostaria de fazer um pedido na Doceria La Floresta.");
-const quoteUrl = createWhatsAppUrl("Olá! Gostaria de pedir um orçamento para encomenda.");
 const mapUrl = "https://www.google.com/maps?q=Avenida%20Guapira%2C%201650%20-%20Ja%C3%A7an%C3%A3%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002265-002&output=embed";
 const mapDirectionsUrl = "https://www.google.com/maps/search/?api=1&query=Avenida%20Guapira%2C%201650%20-%20Ja%C3%A7an%C3%A3%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002265-002";
 
@@ -27,12 +27,6 @@ const featuredItems = [
 ].filter((item) => item !== undefined);
 
 const trustItems = ["+20 anos de tradição", "Bolos, doces, salgados e sorvetes", "Aberto todos os dias", "Delivery pelo iFood"];
-
-const orderHighlights: iCardItem[] = [
-  { title: "Bolos inteiros", description: "Bolos feitos para aniversários, encontros e celebrações, com tamanho aproximado para 12 pessoas.", tag: "Encomendas", src: "/images/products/bolo-de-nozes.webp", link: createWhatsAppUrl("Olá! Gostaria de pedir um orçamento para bolo inteiro."), color: "#981d3d", textColor: "#fffdfa" },
-  { title: "Mini salgados", description: "Porções com 30 unidades para servir com praticidade em reuniões, festas e eventos.", tag: "Encomendas", src: "/images/category-covers/salgados.webp", link: createWhatsAppUrl("Olá! Gostaria de pedir um orçamento para mini salgados."), color: "#981d3d", textColor: "#fffdfa" },
-  { title: "Tortas inteiras", description: "Opções para compartilhar, disponíveis em tamanhos de aproximadamente 8 ou 12 fatias.", tag: "Encomendas", src: "/images/products/supplied-torta-de-morango.webp", link: createWhatsAppUrl("Olá! Gostaria de pedir um orçamento para torta inteira."), color: "#981d3d", textColor: "#fffdfa" },
-];
 
 type ExternalLinkProps = { href: string; className: string; children: React.ReactNode; label?: string };
 function ExternalLink({ href, className, children, label }: ExternalLinkProps) {
@@ -67,12 +61,12 @@ export default function Home() {
             <MotionReveal className="hero-copy">
               <p className="eyebrow">Tradição que adoça o Jaçanã</p>
               <h1>Doceria<br /><em>La Floresta</em></h1>
-              <p className="hero-text">{business.slogan}. Um cardápio completo para deixar cada encontro ainda mais especial.</p>
+              <p className="hero-hook">Seu próximo momento merece uma fatia especial.</p><p className="hero-text">Bolos, doces e salgados no Jaçanã. Escolha seu favorito para hoje ou planeje uma celebração com a gente.</p>
               <div className="button-row">
-                <ExternalLink href={whatsappUrl} className="button button-primary"><WhatsAppIcon /> Pedir pelo WhatsApp</ExternalLink>
+                <a href="#cardapio" className="button button-primary">Escolher meu favorito <ArrowIcon /></a>
                 <ExternalLink href={business.social.ifood} className="button button-outline">Pedir no iFood <ArrowIcon /></ExternalLink>
               </div>
-              <p className="consult-note">Disponibilidade e valores sob consulta.</p>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hero-contact text-link"><WhatsAppIcon /> Prefere conversar? Peça pelo WhatsApp</a><p className="consult-note">Disponibilidade e valores sob consulta.</p>
             </MotionReveal>
             <MotionReveal className="hero-visual">
               <ProductPlaceholder
@@ -82,7 +76,7 @@ export default function Home() {
                 lcp
                 position="center center"
               />
-              <div className="hero-seal"><strong>+20</strong><span>anos de<br />tradição</span></div>
+              <div className="hero-photo-caption">Bolo Floresta Negra <span>Um clássico da casa</span></div><div className="hero-seal"><strong>+20</strong><span>anos de<br />tradição</span></div>
             </MotionReveal>
           </div>
         </section>
@@ -95,18 +89,22 @@ export default function Home() {
           <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Favoritos da casa</p><h2>Os mais pedidos</h2></div><p>Confira quatro opções em destaque e veja o cardápio completo logo abaixo.</p></MotionReveal>
           <div className="featured-grid">{featuredItems.map((item, index) => (
             <MotionReveal className="product-card" key={item.name}>
+              <ProductDetails item={item}>
               <ProductPlaceholder
                 image={item.image}
                 label={item.name}
                 context="featured"
                 position={item.imagePosition}
                 fit={item.imageFit}
+                kind={item.imageKind}
               />
+              <span className="photo-details-label">Ver de perto ↗</span>
+              </ProductDetails>
               <div className="product-copy">
                 <span className="card-number">0{index + 1}</span>
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
-                <ExternalLink href={createMenuInquiryUrl(item.name)} className="text-link">Consultar <ArrowIcon /></ExternalLink>
+                <ExternalLink href={createMenuInquiryUrl(item.name)} className="text-link">Quero esse produto <ArrowIcon /></ExternalLink>
               </div>
             </MotionReveal>
           ))}</div>
@@ -118,22 +116,15 @@ export default function Home() {
           <MotionReveal className="order-visual"><ProductPlaceholder image="/images/products/bolo-de-nozes.webp" label="Bolo de Nozes para encomendas" context="order" position="center 45%" /></MotionReveal>
           <MotionReveal className="order-copy"><p className="eyebrow light">Celebre com a gente</p><h2>Encomendas para momentos especiais</h2><p>Para aniversários, encontros e eventos, preparamos opções tradicionais sob consulta.</p>
             <ul className="order-list"><li><strong>Bolos inteiros</strong><span>Servem aproximadamente 12 pessoas</span></li><li><strong>Mini salgados</strong><span>Porções com 30 unidades</span></li><li><strong>Tortas inteiras</strong><span>Opções de 8 ou 12 fatias</span></li></ul>
-            <ExternalLink href={quoteUrl} className="button button-cream"><WhatsAppIcon /> Pedir orçamento</ExternalLink>
+            <a href="#monte-sua-encomenda" className="button button-cream">Montar minha encomenda <ArrowIcon /></a>
           </MotionReveal>
         </div></section>
 
-        <section className="scroll-cards-section order-highlights-section" aria-labelledby="opcoes-para-encomenda">
-          <div className="container scroll-cards-heading">
-            <p className="eyebrow">Encomendas</p>
-            <h2 id="opcoes-para-encomenda">Escolha o que combina com a sua celebração</h2>
-            <p>Conheça as opções de encomenda e fale com a nossa equipe para confirmar sabores, disponibilidade e detalhes do pedido.</p>
-          </div>
-          <CardsParallax items={orderHighlights} />
-        </section>
+        <OrderBuilder />
 
         <section className="section about-section" id="sobre"><div className="container about-grid">
-          <MotionReveal className="about-mark"><span>Desde</span><strong>+20</strong><span>anos</span></MotionReveal>
-          <MotionReveal className="about-copy"><p className="eyebrow">Nossa história</p><h2>Uma doceria de bairro, feita com carinho</h2><span className="draft-label">Rascunho — revisar com o proprietário</span><p>Há mais de 20 anos, a Doceria La Floresta faz parte do dia a dia do Jaçanã, reunindo tradição, receitas queridas e atendimento acolhedor.</p><p>Dos bolos aos salgados e sorvetes, cada escolha ajuda a transformar uma pausa comum em um momento especial.</p></MotionReveal>
+          <MotionReveal className="about-mark"><span>Mais de</span><strong>20</strong><span>anos de tradição</span></MotionReveal>
+          <MotionReveal className="about-copy"><p className="eyebrow">Nossa história</p><h2>Uma doceria de bairro, feita com carinho</h2><p>Há mais de 20 anos, a Doceria La Floresta faz parte do dia a dia do Jaçanã, reunindo tradição, receitas queridas e atendimento acolhedor.</p><p>Dos bolos aos salgados e sorvetes, cada escolha ajuda a transformar uma pausa comum em um momento especial.</p></MotionReveal>
         </div></section>
 
         <section className="section how-section" id="como-pedir"><div className="container">
@@ -144,30 +135,24 @@ export default function Home() {
         <section className="section gallery-section" id="galeria"><div className="container">
           <MotionReveal className="section-heading split-heading"><div><p className="eyebrow">Conheça nossos produtos</p><h2>Um pouco da La Floresta</h2></div><ExternalLink href={business.social.instagram} className="button button-outline"><InstagramIcon /> Seguir @doceria.lafloresta</ExternalLink></MotionReveal>
           <div className="gallery-grid">
-            <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-1" label="Ver o Instagram da Doceria La Floresta — foto 1">
-              <ProductPlaceholder image="/images/products/bolo-rigo.webp" label="Bolo Rigo" context="gallery" position="center center" />
-            </ExternalLink>
-            <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-2" label="Ver o Instagram da Doceria La Floresta — foto 2">
-              <ProductPlaceholder image="/images/products/bolo-de-leite-ninho.webp" label="Bolo de Leite Ninho" context="gallery" position="center 50%" />
-            </ExternalLink>
-            <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-3" label="Ver o Instagram da Doceria La Floresta — foto 3">
-              <ProductPlaceholder image="/images/products/bolo-de-abacaxi.webp" label="Bolo de Abacaxi" context="gallery" position="52% center" />
-            </ExternalLink>
-            <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-4" label="Ver o Instagram da Doceria La Floresta — foto 4">
-              <ProductPlaceholder image="/images/products/bolo-de-kit-kat-com-morango.webp" label="Bolo de Kit-Kat com Morango" context="gallery" position="center center" fit="contain" />
-            </ExternalLink>
-            <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-5" label="Ver o Instagram da Doceria La Floresta — foto 5">
-              <ProductPlaceholder image="/images/products/bolo-mil-folhas.webp" label="Bolo Mil Folhas" context="gallery" position="center center" />
-            </ExternalLink>
-            <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-6" label="Ver o Instagram da Doceria La Floresta — foto 6">
-              <ProductPlaceholder image="/images/products/bolo-trufado.webp" label="Bolo Trufado" context="gallery" position="center 50%" />
-            </ExternalLink>
-            <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-7" label="Ver o Instagram da Doceria La Floresta — foto 7">
-              <ProductPlaceholder image="/images/products/bolo-de-morango-com-cobertura-de-chantilly.webp" label="Bolo de Morango com Chantilly" context="gallery" position="center center" />
-            </ExternalLink>
-            <ExternalLink href={business.social.instagram} className="gallery-item gallery-item-8" label="Ver o Instagram da Doceria La Floresta — foto 8">
-              <ProductPlaceholder image="/images/products/bolo-de-doce-de-leite-com-morango.webp" label="Bolo de Doce de Leite com Morango" context="gallery" position="center 48%" />
-            </ExternalLink>
+            {menuCategories[0].items.filter((item) => ["bolo-rigo", "bolo-de-leite-ninho", "bolo-de-abacaxi", "bolo-de-kit-kat-com-morango", "bolo-mil-folhas", "bolo-trufado", "bolo-de-morango-com-cobertura-de-chantilly", "bolo-de-doce-de-leite-com-morango"].includes(item.slug)).map((item, index) => (
+              <ProductDetails key={item.slug} item={item} servingNote={menuCategories[0].servingNote} className={`gallery-item gallery-item-${index + 1}`}>
+                <ProductPlaceholder image={item.image} label={item.name} context="gallery" position={item.imagePosition} fit={item.imageFit} kind={item.imageKind} />
+                <span className="gallery-caption">{item.name} <span aria-hidden="true">↗</span></span>
+              </ProductDetails>
+            ))}
+          </div>
+        </div></section>
+
+        <section className="section faq-section" id="duvidas" aria-labelledby="faq-title"><div className="container faq-grid">
+          <div><p className="eyebrow">Antes de pedir</p><h2 id="faq-title">Uma ajudinha para escolher</h2><p>Tem outra dúvida? Nossa equipe conversa com você pelo WhatsApp.</p><ExternalLink href={whatsappUrl} className="text-link">Falar com a La Floresta <ArrowIcon /></ExternalLink></div>
+          <div className="faq-list">
+            {[
+              ["Como consulto os valores?", "Escolha um produto e toque em consultar disponibilidade. A mensagem no WhatsApp já leva o nome do item para a equipe confirmar valores e opções."],
+              ["Com quanto tempo devo encomendar?", "Informe a data desejada no formulário. A equipe confirma a antecedência necessária e a disponibilidade para cada produto."],
+              ["Posso retirar na loja ou pedir entrega?", "Você pode consultar a retirada na Avenida Guapira, 1650, ou verificar a entrega pelo iFood. Para encomendas, combine as possibilidades diretamente com a equipe."],
+              ["Como confirmo tamanhos, ingredientes e pagamento?", "Consulte a equipe antes de concluir o pedido. Informe alergias e restrições alimentares para verificar ingredientes e condições de preparo. Tamanhos, rendimento e formas de pagamento também são confirmados no atendimento."],
+            ].map(([question, answer]) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}
           </div>
         </div></section>
 
