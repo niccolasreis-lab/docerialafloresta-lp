@@ -46,7 +46,7 @@ for (const item of uniqueProducts.values()) {
   const expectedPrefix = item.imageKind === "photo"
     ? "/images/products/"
     : "/images/generated/products/";
-  const expectedExtension = item.imageKind === "photo" ? ".webp" : ".svg";
+  const expectedExtension = item.imageKind === "illustration" ? ".svg" : ".webp";
   if (!item.image.startsWith(expectedPrefix) || !item.image.endsWith(expectedExtension)) {
     failures.push(`Tipo e arquivo incompatíveis em ${item.slug}: ${item.imageKind} -> ${item.image}`);
   }
@@ -81,16 +81,35 @@ for (const file of generatedFiles) {
   generatedHashes.set(hash, file);
 }
 
+const cropManifest = JSON.parse(await readFile("scripts/product-crops.json", "utf8"));
+const generatedItems = [...uniqueProducts.values()].filter((item) => item.imageKind === "generated");
+if (cropManifest.length !== 82 || generatedItems.length !== 82) failures.push("Esperados 82 produtos recortados individualmente.");
+const rasterHashes = new Set();
+for (const crop of cropManifest) {
+  const item = uniqueProducts.get(crop.slug);
+  if (!item || item.name !== crop.name || item.imageKind !== "generated" || item.image !== `/images/generated/products/${crop.slug}.webp` || item.imageFit !== "contain") {
+    failures.push(`Correspondência incorreta para ${crop.name}`);
+    continue;
+  }
+  const bytes = await readFile(path.join(publicDirectory, item.image));
+  const hash = createHash("sha256").update(bytes).digest("hex");
+  if (rasterHashes.has(hash)) failures.push(`Recorte duplicado: ${crop.name}`);
+  rasterHashes.add(hash);
+  const metadata = await sharp(bytes).metadata();
+  if (metadata.width !== crop.crop.width || metadata.height !== crop.crop.height) failures.push(`Dimensões do recorte divergentes: ${crop.name}`);
+}
+
 const counts = {
   categories: menuCategories.length,
   entries: menuCategories.flatMap((category) => category.items).length,
   uniqueProducts: uniqueProducts.size,
   photos: [...uniqueProducts.values()].filter((item) => item.imageKind === "photo").length,
   illustrations: expectedGeneratedNames.size,
+  generated: [...uniqueProducts.values()].filter((item) => item.imageKind === "generated").length,
   categoryCovers: menuCategories.length,
 };
 
-if (counts.entries !== 142 || counts.uniqueProducts !== 128 || counts.photos < 13 || counts.illustrations + counts.photos !== counts.uniqueProducts) {
+if (counts.entries !== 142 || counts.uniqueProducts !== 128 || counts.photos < 13 || counts.illustrations + counts.generated + counts.photos !== counts.uniqueProducts) {
   failures.push(`Inventário inesperado: ${JSON.stringify(counts)}`);
 }
 

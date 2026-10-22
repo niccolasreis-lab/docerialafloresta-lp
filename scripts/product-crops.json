@@ -1,0 +1,986 @@
+[
+  {
+    "name": "Bolo de Abacaxi com Coco",
+    "slug": "bolo-de-abacaxi-com-coco",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 5,
+      "top": 126,
+      "width": 335,
+      "height": 165
+    }
+  },
+  {
+    "name": "Bolo de Limão",
+    "slug": "bolo-de-limao",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 350,
+      "top": 126,
+      "width": 326,
+      "height": 165
+    }
+  },
+  {
+    "name": "Bolo de Chocolate com Morango",
+    "slug": "bolo-de-chocolate-com-morango",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 686,
+      "top": 126,
+      "width": 332,
+      "height": 165
+    }
+  },
+  {
+    "name": "Bolo Diplomata",
+    "slug": "bolo-diplomata",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 5,
+      "top": 330,
+      "width": 335,
+      "height": 181
+    }
+  },
+  {
+    "name": "Bolo de Doce de Leite com Ameixa",
+    "slug": "bolo-de-doce-de-leite-com-ameixa",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 350,
+      "top": 330,
+      "width": 326,
+      "height": 181
+    }
+  },
+  {
+    "name": "Bolo Folhado de Morango",
+    "slug": "bolo-folhado-de-morango",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 686,
+      "top": 330,
+      "width": 332,
+      "height": 181
+    }
+  },
+  {
+    "name": "Bolo Floresta Branca",
+    "slug": "bolo-floresta-branca",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 5,
+      "top": 546,
+      "width": 335,
+      "height": 181
+    }
+  },
+  {
+    "name": "Bolo de Frutas",
+    "slug": "bolo-de-frutas",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 350,
+      "top": 546,
+      "width": 326,
+      "height": 181
+    }
+  },
+  {
+    "name": "Bolo de Kit-Kat",
+    "slug": "bolo-de-kit-kat",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 686,
+      "top": 546,
+      "width": 332,
+      "height": 181
+    }
+  },
+  {
+    "name": "Bolo de Creme de Leite Ninho",
+    "slug": "bolo-de-creme-de-leite-ninho",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 5,
+      "top": 771,
+      "width": 335,
+      "height": 175
+    }
+  },
+  {
+    "name": "Bolo Maracolate",
+    "slug": "bolo-maracolate",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 350,
+      "top": 771,
+      "width": 326,
+      "height": 175
+    }
+  },
+  {
+    "name": "Bolo de Maracujá",
+    "slug": "bolo-de-maracuja",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 686,
+      "top": 771,
+      "width": 332,
+      "height": 175
+    }
+  },
+  {
+    "name": "Bolo de Morango",
+    "slug": "bolo-de-morango",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 5,
+      "top": 986,
+      "width": 335,
+      "height": 186
+    }
+  },
+  {
+    "name": "Bolo Paris",
+    "slug": "bolo-paris",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 350,
+      "top": 986,
+      "width": 326,
+      "height": 186
+    }
+  },
+  {
+    "name": "Bolo de Creme de Coco",
+    "slug": "bolo-de-creme-de-coco",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 686,
+      "top": 986,
+      "width": 332,
+      "height": 186
+    }
+  },
+  {
+    "name": "Bolo Sonho de Valsa",
+    "slug": "bolo-sonho-de-valsa",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 5,
+      "top": 1220,
+      "width": 502,
+      "height": 210
+    }
+  },
+  {
+    "name": "Bolo Prestígio",
+    "slug": "bolo-prestigio",
+    "source": "exec-6e738e40-3bdf-4371-80f9-8383e1059ebd.png",
+    "sourceSha256": "93ee749c350a5d682adc41f8f34b6dce03d2bb190389711ce072fa427d0f1aa5",
+    "crop": {
+      "left": 517,
+      "top": 1220,
+      "width": 501,
+      "height": 210
+    }
+  },
+  {
+    "name": "Bomba de Baunilha",
+    "slug": "bomba-de-baunilha",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 15,
+      "top": 147,
+      "width": 318,
+      "height": 250
+    }
+  },
+  {
+    "name": "Bomba de Chocolate",
+    "slug": "bomba-de-chocolate",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 350,
+      "top": 147,
+      "width": 324,
+      "height": 250
+    }
+  },
+  {
+    "name": "Bomba de Doce de Leite",
+    "slug": "bomba-de-doce-de-leite",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 691,
+      "top": 147,
+      "width": 318,
+      "height": 250
+    }
+  },
+  {
+    "name": "Cheesecake de Goiabada",
+    "slug": "cheesecake-de-goiabada",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 15,
+      "top": 439,
+      "width": 318,
+      "height": 285
+    }
+  },
+  {
+    "name": "Cheesecake de Doce de Leite",
+    "slug": "cheesecake-de-doce-de-leite",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 350,
+      "top": 439,
+      "width": 324,
+      "height": 285
+    }
+  },
+  {
+    "name": "Cheesecake de Chocolate",
+    "slug": "cheesecake-de-chocolate",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 691,
+      "top": 439,
+      "width": 318,
+      "height": 285
+    }
+  },
+  {
+    "name": "Cheesecake de Morango",
+    "slug": "cheesecake-de-morango",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 15,
+      "top": 776,
+      "width": 318,
+      "height": 288
+    }
+  },
+  {
+    "name": "Cheesecake de Oreo",
+    "slug": "cheesecake-de-oreo",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 350,
+      "top": 776,
+      "width": 324,
+      "height": 288
+    }
+  },
+  {
+    "name": "Torta Negresco com Limão",
+    "slug": "torta-negresco-com-limao",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 691,
+      "top": 776,
+      "width": 318,
+      "height": 288
+    }
+  },
+  {
+    "name": "Pote Negresco com Limão",
+    "slug": "pote-negresco-com-limao",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 15,
+      "top": 1121,
+      "width": 318,
+      "height": 284
+    }
+  },
+  {
+    "name": "Bombom de Brigadeiro",
+    "slug": "bombom-de-brigadeiro",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 350,
+      "top": 1121,
+      "width": 324,
+      "height": 284
+    }
+  },
+  {
+    "name": "Bombom Negresco",
+    "slug": "bombom-negresco",
+    "source": "exec-2622330a-711d-45ff-9d74-0191ed090123.png",
+    "sourceSha256": "d9b2ace6a2d8487221566b6bdbf9722d2fb7147b716e6d783e0fe93b072108a0",
+    "crop": {
+      "left": 691,
+      "top": 1121,
+      "width": 318,
+      "height": 284
+    }
+  },
+  {
+    "name": "Torta Dois Sabores",
+    "slug": "torta-dois-sabores",
+    "source": "exec-7535987e-1f85-46d9-8c37-2550c207ab84.png",
+    "sourceSha256": "655fb05c65c61af4d55c85a764b9b34b66a794d16855db097fecf91a66be218b",
+    "crop": {
+      "left": 20,
+      "top": 198,
+      "width": 481,
+      "height": 343
+    }
+  },
+  {
+    "name": "Torta Negresco",
+    "slug": "torta-negresco",
+    "source": "exec-7535987e-1f85-46d9-8c37-2550c207ab84.png",
+    "sourceSha256": "655fb05c65c61af4d55c85a764b9b34b66a794d16855db097fecf91a66be218b",
+    "crop": {
+      "left": 522,
+      "top": 198,
+      "width": 482,
+      "height": 343
+    }
+  },
+  {
+    "name": "Torta de Banana Folhada",
+    "slug": "torta-de-banana-folhada",
+    "source": "exec-7535987e-1f85-46d9-8c37-2550c207ab84.png",
+    "sourceSha256": "655fb05c65c61af4d55c85a764b9b34b66a794d16855db097fecf91a66be218b",
+    "crop": {
+      "left": 20,
+      "top": 607,
+      "width": 481,
+      "height": 331
+    }
+  },
+  {
+    "name": "Torta de Frutas",
+    "slug": "torta-de-frutas",
+    "source": "exec-7535987e-1f85-46d9-8c37-2550c207ab84.png",
+    "sourceSha256": "655fb05c65c61af4d55c85a764b9b34b66a794d16855db097fecf91a66be218b",
+    "crop": {
+      "left": 522,
+      "top": 607,
+      "width": 482,
+      "height": 331
+    }
+  },
+  {
+    "name": "Torta de Maçã Folhada",
+    "slug": "torta-de-maca-folhada",
+    "source": "exec-7535987e-1f85-46d9-8c37-2550c207ab84.png",
+    "sourceSha256": "655fb05c65c61af4d55c85a764b9b34b66a794d16855db097fecf91a66be218b",
+    "crop": {
+      "left": 20,
+      "top": 997,
+      "width": 481,
+      "height": 348
+    }
+  },
+  {
+    "name": "Quindão",
+    "slug": "quindao",
+    "source": "exec-7535987e-1f85-46d9-8c37-2550c207ab84.png",
+    "sourceSha256": "655fb05c65c61af4d55c85a764b9b34b66a794d16855db097fecf91a66be218b",
+    "crop": {
+      "left": 522,
+      "top": 997,
+      "width": 482,
+      "height": 348
+    }
+  },
+  {
+    "name": "Empada de Palmito",
+    "slug": "empada-de-palmito",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 12,
+      "top": 173,
+      "width": 323,
+      "height": 246
+    }
+  },
+  {
+    "name": "Bolinho de Carne",
+    "slug": "bolinho-de-carne",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 350,
+      "top": 173,
+      "width": 326,
+      "height": 246
+    }
+  },
+  {
+    "name": "Coxinha de Frango",
+    "slug": "coxinha-de-frango",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 688,
+      "top": 173,
+      "width": 322,
+      "height": 246
+    }
+  },
+  {
+    "name": "Coxinha de Frango com Catupiry",
+    "slug": "coxinha-de-frango-com-catupiry",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 12,
+      "top": 490,
+      "width": 323,
+      "height": 243
+    }
+  },
+  {
+    "name": "Enroladinho de Salsicha",
+    "slug": "enroladinho-de-salsicha",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 350,
+      "top": 490,
+      "width": 326,
+      "height": 243
+    }
+  },
+  {
+    "name": "Mini Salgados (30 un.)",
+    "slug": "mini-salgados-30-un",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 688,
+      "top": 490,
+      "width": 322,
+      "height": 243
+    }
+  },
+  {
+    "name": "Risoles de Queijo",
+    "slug": "risoles-de-queijo",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 12,
+      "top": 789,
+      "width": 323,
+      "height": 264
+    }
+  },
+  {
+    "name": "Risoles de Presunto e Queijo",
+    "slug": "risoles-de-presunto-e-queijo",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 350,
+      "top": 789,
+      "width": 326,
+      "height": 264
+    }
+  },
+  {
+    "name": "Torta de Frango (fatia e inteira, 12 fatias)",
+    "slug": "torta-de-frango-fatia-e-inteira-12-fatias",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 688,
+      "top": 789,
+      "width": 322,
+      "height": 264
+    }
+  },
+  {
+    "name": "Bolinha de Queijo",
+    "slug": "bolinha-de-queijo",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 12,
+      "top": 1130,
+      "width": 323,
+      "height": 278
+    }
+  },
+  {
+    "name": "Empada de Frango",
+    "slug": "empada-de-frango",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 350,
+      "top": 1130,
+      "width": 326,
+      "height": 278
+    }
+  },
+  {
+    "name": "Assado de Frango",
+    "slug": "assado-de-frango",
+    "source": "exec-397c9817-7602-4699-b51a-319c682ecb7c.png",
+    "sourceSha256": "2d3f3de7fd370649edb8e58fabf11e30ab102f1be9350b39eb46c86f2c945c83",
+    "crop": {
+      "left": 688,
+      "top": 1130,
+      "width": 322,
+      "height": 278
+    }
+  },
+  {
+    "name": "Uva",
+    "slug": "uva",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 2,
+      "top": 167,
+      "width": 251,
+      "height": 179
+    }
+  },
+  {
+    "name": "Pistache",
+    "slug": "pistache",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 258,
+      "top": 167,
+      "width": 251,
+      "height": 179
+    }
+  },
+  {
+    "name": "Passas ao Rum",
+    "slug": "passas-ao-rum",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 516,
+      "top": 167,
+      "width": 249,
+      "height": 179
+    }
+  },
+  {
+    "name": "Papaya",
+    "slug": "papaya",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 773,
+      "top": 167,
+      "width": 249,
+      "height": 179
+    }
+  },
+  {
+    "name": "Morango",
+    "slug": "morango",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 2,
+      "top": 382,
+      "width": 251,
+      "height": 178
+    }
+  },
+  {
+    "name": "Limão",
+    "slug": "limao",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 258,
+      "top": 382,
+      "width": 251,
+      "height": 178
+    }
+  },
+  {
+    "name": "Leite Condensado",
+    "slug": "leite-condensado",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 516,
+      "top": 382,
+      "width": 249,
+      "height": 178
+    }
+  },
+  {
+    "name": "Iogurte com Framboesa",
+    "slug": "iogurte-com-framboesa",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 773,
+      "top": 382,
+      "width": 249,
+      "height": 178
+    }
+  },
+  {
+    "name": "Crocante",
+    "slug": "crocante",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 2,
+      "top": 602,
+      "width": 251,
+      "height": 175
+    }
+  },
+  {
+    "name": "Coco",
+    "slug": "coco",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 258,
+      "top": 602,
+      "width": 251,
+      "height": 175
+    }
+  },
+  {
+    "name": "Chiclete",
+    "slug": "chiclete",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 516,
+      "top": 602,
+      "width": 249,
+      "height": 175
+    }
+  },
+  {
+    "name": "Cereja",
+    "slug": "cereja",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 773,
+      "top": 602,
+      "width": 249,
+      "height": 175
+    }
+  },
+  {
+    "name": "Menta com Flocos",
+    "slug": "menta-com-flocos",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 2,
+      "top": 820,
+      "width": 251,
+      "height": 182
+    }
+  },
+  {
+    "name": "Maracujá",
+    "slug": "maracuja",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 258,
+      "top": 820,
+      "width": 251,
+      "height": 182
+    }
+  },
+  {
+    "name": "Maçã Verde",
+    "slug": "maca-verde",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 516,
+      "top": 820,
+      "width": 249,
+      "height": 182
+    }
+  },
+  {
+    "name": "Tangerina",
+    "slug": "tangerina",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 773,
+      "top": 820,
+      "width": 249,
+      "height": 182
+    }
+  },
+  {
+    "name": "Creme",
+    "slug": "creme",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 2,
+      "top": 1044,
+      "width": 251,
+      "height": 184
+    }
+  },
+  {
+    "name": "Flocos",
+    "slug": "flocos",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 258,
+      "top": 1044,
+      "width": 251,
+      "height": 184
+    }
+  },
+  {
+    "name": "Chocolate",
+    "slug": "chocolate",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 516,
+      "top": 1044,
+      "width": 249,
+      "height": 184
+    }
+  },
+  {
+    "name": "Banana",
+    "slug": "banana",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 773,
+      "top": 1044,
+      "width": 249,
+      "height": 184
+    }
+  },
+  {
+    "name": "Abacaxi",
+    "slug": "abacaxi",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 224,
+      "top": 1275,
+      "width": 286,
+      "height": 175
+    }
+  },
+  {
+    "name": "Açaí com Morango",
+    "slug": "acai-com-morango",
+    "source": "exec-8cb4e680-9d23-4ccb-bc0d-f06ba03569db.png",
+    "sourceSha256": "8693ee902e7ab5f80c1c58a78a4ee5c19673fe5653537c285781e09162c3f338",
+    "crop": {
+      "left": 516,
+      "top": 1275,
+      "width": 290,
+      "height": 175
+    }
+  },
+  {
+    "name": "Coca-Cola",
+    "slug": "coca-cola",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 20,
+      "top": 130,
+      "width": 324,
+      "height": 228
+    }
+  },
+  {
+    "name": "Guaraná Antarctica",
+    "slug": "guarana-antarctica",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 358,
+      "top": 130,
+      "width": 311,
+      "height": 228
+    }
+  },
+  {
+    "name": "Fanta",
+    "slug": "fanta",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 686,
+      "top": 130,
+      "width": 324,
+      "height": 228
+    }
+  },
+  {
+    "name": "Schweppes",
+    "slug": "schweppes",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 20,
+      "top": 407,
+      "width": 324,
+      "height": 249
+    }
+  },
+  {
+    "name": "Sufresh",
+    "slug": "sufresh",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 358,
+      "top": 407,
+      "width": 311,
+      "height": 249
+    }
+  },
+  {
+    "name": "Água mineral",
+    "slug": "agua-mineral",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 686,
+      "top": 407,
+      "width": 324,
+      "height": 249
+    }
+  },
+  {
+    "name": "Água com gás",
+    "slug": "agua-com-gas",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 20,
+      "top": 700,
+      "width": 324,
+      "height": 241
+    }
+  },
+  {
+    "name": "Água de coco",
+    "slug": "agua-de-coco",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 358,
+      "top": 700,
+      "width": 311,
+      "height": 241
+    }
+  },
+  {
+    "name": "H2OH!",
+    "slug": "h2oh",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 686,
+      "top": 700,
+      "width": 324,
+      "height": 241
+    }
+  },
+  {
+    "name": "Cerveja Skol",
+    "slug": "cerveja-skol",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 20,
+      "top": 1000,
+      "width": 324,
+      "height": 222
+    }
+  },
+  {
+    "name": "Cerveja Itaipava",
+    "slug": "cerveja-itaipava",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 358,
+      "top": 1000,
+      "width": 311,
+      "height": 222
+    }
+  },
+  {
+    "name": "Água tônica",
+    "slug": "agua-tonica",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 686,
+      "top": 1000,
+      "width": 324,
+      "height": 222
+    }
+  },
+  {
+    "name": "Café expresso",
+    "slug": "cafe-expresso",
+    "source": "exec-93c2bd1b-4fdb-45ac-bdd7-e81b99a3fe4e.png",
+    "sourceSha256": "83b1d7f8cb7e8823165e27e9fcb2e8d6b5e94406a7d69e7db7423b29b9b95b26",
+    "crop": {
+      "left": 370,
+      "top": 1290,
+      "width": 321,
+      "height": 155
+    }
+  }
+]

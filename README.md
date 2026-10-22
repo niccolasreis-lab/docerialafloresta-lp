@@ -20,3 +20,7 @@ Acesse `http://localhost:3000`.
 - Fotos de produtos: `public/images/`
 
 > Horário confirmado: todos os dias, das 10:00 às 02:00 (America/Sao_Paulo).
+
+## Imagens individuais dos produtos
+
+O mapa `data/generated-product-images.json` associa os produtos às imagens WebP extraídas das pranchas selecionadas. Para refazer os recortes com os mesmos originais, rode `node scripts/extract-product-cards.mjs /caminho/das/pranchas`; o manifesto `scripts/product-crops.json` verifica os hashes e registra os enquadramentos. Os nomes e demais dados continuam em `data/menu.ts`.
