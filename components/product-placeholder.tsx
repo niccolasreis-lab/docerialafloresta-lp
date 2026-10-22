@@ -39,7 +39,7 @@ export function ProductPlaceholder({
       <div className={`product-placeholder product-image-${fit} product-image-${kind}`}>
         <Image
           src={image}
-          alt={kind === "photo" ? `Foto de ${label}` : `Ilustração de ${label}`}
+          alt={kind === "photo" ? `Foto de ${label}` : kind === "generated" ? label : `Ilustração de ${label}`}
           fill
           loading={lcp ? "eager" : "lazy"}
           fetchPriority={lcp ? "high" : "auto"}

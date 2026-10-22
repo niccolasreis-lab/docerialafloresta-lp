@@ -1,3 +1,5 @@
+import generatedProductImages from "./generated-product-images.json" with { type: "json" };
+
 export type MenuCategoryId =
   | "bolos"
   | "doces"
@@ -15,7 +17,7 @@ export type ProductImagePosition =
   | "52% center";
 
 export type ProductImageFit = "cover" | "contain";
-export type ProductImageKind = "photo" | "illustration";
+export type ProductImageKind = "photo" | "illustration" | "generated";
 
 export type MenuItem = {
   slug: string;
@@ -115,15 +117,16 @@ const item = (
 ): MenuItem => {
   const slug = slugify(name);
   const imageMetadata = productImages[slug];
+  const generatedImage = (generatedProductImages as Readonly<Record<string, string>>)[slug];
 
   return {
     slug,
     name,
     description,
-    image: imageMetadata?.image ?? `/images/generated/products/${slug}.svg`,
-    imageKind: imageMetadata ? "photo" : "illustration",
+    image: imageMetadata?.image ?? generatedImage ?? `/images/generated/products/${slug}.svg`,
+    imageKind: imageMetadata ? "photo" : generatedImage ? "generated" : "illustration",
     ...(imageMetadata?.imagePosition ? { imagePosition: imageMetadata.imagePosition } : {}),
-    ...(imageMetadata?.imageFit ? { imageFit: imageMetadata.imageFit } : {}),
+    ...(imageMetadata?.imageFit ? { imageFit: imageMetadata.imageFit } : generatedImage ? { imageFit: "contain" as const } : {}),
     ...(availabilityNote ? { availabilityNote } : {}),
   };
 };
