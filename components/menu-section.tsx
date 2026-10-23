@@ -6,6 +6,8 @@ import { menuCategories } from "@/data/menu";
 import type { MenuCategoryId } from "@/data/menu";
 import { createMenuInquiryUrl } from "@/lib/whatsapp";
 import { ProductPlaceholder } from "@/components/product-placeholder";
+import { findMenuItems } from "@/lib/menu-search";
+import { ProductDetails } from "@/components/product-details";
 import { ArrowIcon } from "@/components/icons";
 
 export function MenuSection() {
@@ -29,25 +31,7 @@ export function MenuSection() {
     return () => window.removeEventListener("hashchange", selectCategoryFromHash);
   }, []);
 
-  const filteredItems = useMemo(() => {
-    const normalizedQuery = searchQuery
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .trim();
-
-    if (!normalizedQuery) return currentCategory.items;
-
-    const normalize = (value: string) =>
-      value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
-    return currentCategory.items.filter(
-      (item) =>
-        normalize(item.name).includes(normalizedQuery) ||
-        (item.description && normalize(item.description).includes(normalizedQuery)) ||
-        (item.availabilityNote && normalize(item.availabilityNote).includes(normalizedQuery))
-    );
-  }, [currentCategory, searchQuery]);
+  const filteredItems = useMemo(() => findMenuItems(menuCategories, activeCategory, searchQuery), [activeCategory, searchQuery]);
 
   const selectCategory = (categoryId: MenuCategoryId) => {
     setActiveCategory(categoryId);
@@ -77,7 +61,7 @@ export function MenuSection() {
             <p className="eyebrow">Cardápio completo</p>
             <h2>Explore o cardápio</h2>
           </div>
-          <p>Navegue pelas categorias ou busque um item. Clique em consultar para fazer seu pedido ou tirar dúvidas pelo WhatsApp.</p>
+          <p>Navegue pelas categorias ou busque um item. Veja os detalhes e consulte disponibilidade pelo WhatsApp.</p>
         </div>
 
         <div className="menu-controls">
@@ -121,32 +105,35 @@ export function MenuSection() {
               id="menu-search"
               type="search"
               className="menu-search-input"
-              placeholder={`Buscar em ${currentCategory.name}...`}
+              placeholder="Buscar em todo o cardápio..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
         </div>
 
-        {currentCategory.servingNote && (
+        {!searchQuery.trim() && currentCategory.servingNote && (
           <p className="menu-serving-note">{currentCategory.servingNote}</p>
         )}
 
+        <p className="menu-result-count" role="status">{filteredItems.length} {filteredItems.length === 1 ? "produto encontrado" : "produtos encontrados"}{searchQuery.trim() ? " em todo o cardápio" : ` em ${currentCategory.name}`}</p>
         {filteredItems.length === 0 ? (
-          <div className="menu-empty">
-            <p>Nenhum item encontrado para &ldquo;{searchQuery}&rdquo; em {currentCategory.name}.</p>
+          <div id="menu-products" className="menu-empty" role="region" aria-label="Resultados da busca">
+            <p>Nenhum item encontrado para &ldquo;{searchQuery}&rdquo; no cardápio.</p>
             <button className="button button-outline" onClick={() => setSearchQuery("")}>Limpar busca</button>
           </div>
         ) : (
           <div
             id="menu-products"
-            className="full-menu-grid"
-            role="tabpanel"
-            aria-labelledby={`tab-${activeCategory}`}
-            aria-live="polite"
+            className="full-menu-grid menu-enter"
+            key={`${activeCategory}-${searchQuery.trim() ? "search" : "browse"}`}
+            role={searchQuery.trim() ? "region" : "tabpanel"}
+            aria-label={searchQuery.trim() ? "Resultados em todo o cardápio" : undefined}
+            aria-labelledby={searchQuery.trim() ? undefined : `tab-${activeCategory}`}
           >
             {filteredItems.map((item) => (
-              <div className="product-card full-menu-card" key={item.slug}>
+              <div className="product-card full-menu-card" key={`${item.categoryId}-${item.slug}`}>
+                <ProductDetails item={item} servingNote={item.servingNote}>
                 <ProductPlaceholder
                   image={item.image}
                   label={item.name}
@@ -155,7 +142,10 @@ export function MenuSection() {
                   fit={item.imageFit}
                   kind={item.imageKind}
                 />
+                <span className="photo-details-label">Ver de perto ↗</span>
+                </ProductDetails>
                 <div className="product-copy">
+                  {searchQuery.trim() && <span className="result-category">{item.categoryName}</span>}
                   {item.availabilityNote && <span className="availability-badge">{item.availabilityNote}</span>}
                   <h3>{item.name}</h3>
                   <p>{item.description}</p>
@@ -165,7 +155,7 @@ export function MenuSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Consultar <ArrowIcon />
+                    Consultar disponibilidade <ArrowIcon />
                   </a>
                 </div>
               </div>
