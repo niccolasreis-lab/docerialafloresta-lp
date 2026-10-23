@@ -10,7 +10,7 @@ export function MotionReveal({ children, className }: { children: ReactNode; cla
     <motion.div
       className={className}
       initial={false}
-      whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
+      whileInView={reducedMotion ? undefined : { y: [18, 0] }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >

@@ -1,31 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { isOpenAt } from "@/lib/business-hours";
 import { business } from "@/data/business";
 
 type BusinessStatus = "checking" | "open" | "closed";
 
-const TIME_ZONE = "America/Sao_Paulo";
-const OPENING_MINUTES = 10 * 60;
-const CLOSING_MINUTES = 2 * 60;
-
-function getSaoPauloMinutes(date: Date): number {
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: TIME_ZONE,
-    hour: "2-digit",
-    minute: "2-digit",
-    hourCycle: "h23",
-  }).formatToParts(date);
-
-  const hour = Number(parts.find((part) => part.type === "hour")?.value);
-  const minute = Number(parts.find((part) => part.type === "minute")?.value);
-
-  return hour * 60 + minute;
-}
-
 export function isBusinessOpen(date: Date): boolean {
-  const currentMinutes = getSaoPauloMinutes(date);
-  return currentMinutes >= OPENING_MINUTES || currentMinutes < CLOSING_MINUTES;
+  return isOpenAt(date, business.hours);
 }
 
 export function BusinessStatusBadge() {

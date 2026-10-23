@@ -7,7 +7,7 @@ const seoDescription = `${business.slogan}. Encomendas e delivery pelo WhatsApp 
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.VERCEL_PROJECT_PRODUCTION_URL;
 const siteUrl = configuredSiteUrl
   ? new URL(configuredSiteUrl.startsWith("http") ? configuredSiteUrl : `https://${configuredSiteUrl}`)
-  : new URL("http://localhost:3000");
+  : new URL("https://docerialafloresta-lp.vercel.app");
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/generated/refresh/bolo-floresta-negra-v2.webp",
-        width: 1024,
-        height: 1024,
-        alt: "Bolo Floresta Negra da Doceria La Floresta",
+        url: "/social-preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Doceria La Floresta — bolos, doces e salgados no Jaçanã",
       },
     ],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: seoTitle,
     description: seoDescription,
-    images: ["/images/generated/refresh/bolo-floresta-negra-v2.webp"],
+    images: ["/social-preview.jpg"],
   },
   robots: {
     index: true,
