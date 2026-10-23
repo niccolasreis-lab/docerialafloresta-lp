@@ -20,7 +20,7 @@ export const business: Business = {
     state: "SP",
     postalCode: "02265-002",
   },
-  whatsapp: { display: "(11) 94809-4770", number: "5511948094770" },
+  whatsapp: { display: "(11) 91303-0118", number: "5511913030118" },
   phones: ["(11) 2249-1380", "(11) 2243-0861"],
   hours: {
     summary: "Todos os dias, das 10:00 às 02:00",
