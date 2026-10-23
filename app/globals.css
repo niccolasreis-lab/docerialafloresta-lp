@@ -198,11 +198,11 @@ p { margin-top: 0; }
 .menu-tabs-wrapper::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 2rem; background: linear-gradient(90deg, transparent, rgba(247,234,217,.88)); pointer-events: none; }
 .menu-tabs { display: flex; width: max-content; min-width: 100%; padding: .85rem .75rem 1rem; justify-content: center; gap: clamp(.8rem, 2.5vw, 2rem); }
 .menu-tab { display: grid; width: 7.2rem; padding: 0; border: 0; color: var(--cocoa); background: transparent; place-items: center; gap: .75rem; font: inherit; font-size: .75rem; font-weight: 800; cursor: pointer; scroll-snap-align: center; white-space: normal; }
-.menu-tab-image { position: relative; display: block; overflow: hidden; width: 6rem; height: 6rem; border: 3px solid var(--white); border-radius: 50%; background: var(--cream); box-shadow: 0 8px 20px rgba(63,38,31,.12); transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
-.menu-tab-image img { object-fit: contain; padding: .45rem; transition: transform .25s ease; }
+.menu-tab-image { position: relative; display: block; overflow: hidden; width: 6rem; height: 6rem; border: 2px solid rgba(232,169,47,.26); border-radius: 50%; background: radial-gradient(circle at 35% 25%, var(--white), var(--cream) 65%, #eddbc4); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 7px 18px rgba(63,38,31,.08); transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.menu-tab-image img { object-fit: contain; padding: .1rem; filter: drop-shadow(0 3px 2px rgba(63,38,31,.12)); transition: transform .25s ease; }
 .menu-tab:hover, .menu-tab.active { color: var(--raspberry-dark); }
 .menu-tab:hover .menu-tab-image, .menu-tab.active .menu-tab-image { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(152,29,61,.18); }
-.menu-tab.active .menu-tab-image { outline: 3px solid var(--raspberry); outline-offset: 3px; }
+.menu-tab.active .menu-tab-image { outline: 2px solid var(--raspberry); outline-offset: 3px; }
 .menu-tab:hover .menu-tab-image img { transform: scale(1.06); }
 .menu-search-wrapper { width: min(100%, 30rem); margin-inline: auto; }
 .menu-search-input { width: 100%; min-height: 3rem; padding: .7rem 1rem; border: 1px solid rgba(63,38,31,.25); border-radius: .25rem; color: var(--cocoa); background: var(--white); font: inherit; font-size: .85rem; }
