@@ -105,7 +105,7 @@ const categoryImages: Record<MenuCategoryId, Pick<MenuCategory, "image" | "image
   bolos: { image: "/images/category-covers/bolos.webp", imageKind: "photo", imageAlt: "Foto representativa da categoria de bolos" },
   doces: { image: "/images/category-covers/doces.webp", imageKind: "photo", imageAlt: "Foto representativa da categoria de doces" },
   docinhos: { image: "/images/category-covers/docinhos.webp", imageKind: "photo", imageAlt: "Variedade de brigadeiros, beijinhos e bicho de pé" },
-  "tortas-doces": { image: "/images/generated/categories/tortas-doces.svg", imageKind: "illustration", imageAlt: "Ilustração da categoria de tortas doces" },
+  "tortas-doces": { image: "/images/category-covers/tortas-doces.webp", imageKind: "photo", imageAlt: "Torta de Morango da categoria de tortas doces" },
   salgados: { image: "/images/category-covers/salgados.webp", imageKind: "photo", imageAlt: "Variedade de salgados brasileiros dourados" },
   "sorvetes-acai": { image: "/images/category-covers/sorvetes-acai.webp", imageKind: "photo", imageAlt: "Açaí e sorvetes artesanais" },
   bebidas: { image: "/images/category-covers/bebidas.webp", imageKind: "photo", imageAlt: "Variedade de bebidas, incluindo suco, café e água com gás" },
