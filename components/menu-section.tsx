@@ -89,7 +89,7 @@ export function MenuSection() {
                         alt=""
                         fill
                         sizes="96px"
-                        style={{ objectFit: category.imageKind === "photo" ? "cover" : "contain" }}
+                        style={{ objectFit: "contain" }}
                       />
                     </span>
                     <span>{category.name}</span>

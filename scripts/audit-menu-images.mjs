@@ -9,12 +9,16 @@ const failures = [];
 const uniqueProducts = new Map();
 
 for (const category of menuCategories) {
-  const expectedCategoryPrefix = category.imageKind === "photo"
-    ? "/images/category-covers/"
-    : "/images/generated/categories/";
-  const expectedCategoryExtension = category.imageKind === "photo" ? ".webp" : ".svg";
-  if (!category.image.startsWith(expectedCategoryPrefix) || !category.image.endsWith(expectedCategoryExtension)) {
-    failures.push(`Capa inválida para a categoria ${category.id}: ${category.image}`);
+  const expectedCategoryImage = `/images/category-covers/cutouts/${category.id}.png`;
+  if (category.image !== expectedCategoryImage || category.imageKind !== "generated") {
+    failures.push(`Capa transparente inválida para ${category.id}: ${category.image}`);
+  } else {
+    const categoryPath = path.join(publicDirectory, category.image);
+    const metadata = await sharp(categoryPath).metadata();
+    const stats = await sharp(categoryPath).stats();
+    if (metadata.format !== "png" || !metadata.hasAlpha || stats.channels[3]?.min !== 0 || (stats.channels[3]?.max ?? 0) < 250) {
+      failures.push(`Capa sem transparência real: ${category.id}`);
+    }
   }
 
   for (const item of category.items) {
