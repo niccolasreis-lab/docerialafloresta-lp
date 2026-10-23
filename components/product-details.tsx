@@ -19,7 +19,7 @@ export function ProductDetails({ item, servingNote, children, className = "produ
         <div className="product-dialog-copy">
           <p className="eyebrow">Conheça de perto</p><h2>{item.name}</h2>
           <p>{item.description}</p>
-          {servingNote && <p className="detail-note">{servingNote}</p>}
+          {servingNote && !item.availabilityNote && <p className="detail-note">{servingNote}</p>}
           {item.availabilityNote && <p className="detail-note">{item.availabilityNote}</p>}
           <p className="detail-note">Consulte valores, tamanhos e disponibilidade com a equipe. Informe alergias e restrições antes de pedir.</p>
           <a className="button button-primary" href={createMenuInquiryUrl(item.name)} target="_blank" rel="noopener noreferrer">Quero consultar este produto →</a>
